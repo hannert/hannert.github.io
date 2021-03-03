@@ -62,7 +62,13 @@ section {
 }
 .white{
   background-color: #fefdf7;
-
+  padding-left: 20%;
+  padding-right: 35%;
+}
+.black{
+  background-color: #141313;
+  padding-left: 35%px;
+  padding-right: 20%px;
 }
 #container1 {
     height:800px;
@@ -79,15 +85,15 @@ section {
     z-index:1;
 }
 
-#container2{ /* About section */
+#about{ /* About section */
     height:800px;
     font-family: "Space Grotesk" ;
     line-height: 2;
     font-size: large;
-    padding-left: 20%;
-    padding-right: 35%;
-    padding-top:5%;
     background-color: #fefdf7;
+
+    padding-top:5%;
+
     z-index:1;
     color:141313;
 }
@@ -103,48 +109,42 @@ section {
   height:300px;
   width:300px;
 }
-#container3{ /* work experience section*/
+#skills{ /* work experience section*/
     height:800px;
     font-family:'Courier New', Courier, monospace;
     /* font-family: "Inconsolata"; */
     font-size: x-large;
-    padding-left: 35%px;
-    padding-right: 20%px;
     padding-top:5%;
     color: white;
-    background-color: #141313;
     text-align:right;
     z-index:1;
 
 }
-#container3 h3{
+#skills h3{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#container4{ /* Hobby section*/
+#hobbies{ /* Hobby section*/
     height:900px;
     font-family: "Space Grotesk";
-    padding-left: 20%;
-    padding-right: 35%;
+
     padding-top:5%;
     z-index:1;
     font-size:larger;
-    background-color: #fefdf7;
+
 }
-#container4 p{
+#hobbies p{
 
   color:black;
 }
-#container4 h2{
+#hobbies h2{
   color:black;
 }
-#container5{  
-  padding-left: 35%;
-  padding-right: 20%;
+#contact{  
   text-align: right;
-  background-color: #141313;
+
 }
-#container5 p{
+#contact p{
   font-size: larger;
   font-family:'Courier New', Courier, monospace;
 }
