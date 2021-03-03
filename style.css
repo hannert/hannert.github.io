@@ -1,0 +1,406 @@
+ 
+@font-face {
+  font-family:"kepler-std-semicondensed-dis";
+  src:url("https://use.typekit.net/af/78897f/000000000000000000012f83/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/78897f/000000000000000000012f83/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/78897f/000000000000000000012f83/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:700;
+  }
+  
+  @font-face {
+  font-family:"kepler-std-semicondensed-dis";
+  src:url("https://use.typekit.net/af/bc134b/000000000000000000012f84/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/bc134b/000000000000000000012f84/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/bc134b/000000000000000000012f84/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+  font-display:auto;font-style:italic;font-weight:700;
+  }
+.tk-kepler-std-semicondensed-dis { font-family: "kepler-std-semicondensed-dis",serif; }
+  
+ @font-face {
+   font-family:"Inconsolata";
+   src:url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+   font-display:auto;font-style:normal;font-weight:400;
+  }
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Work+Sans:700);
+ * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  -webkit-font-smoothing: antialiased;
+} 
+#topName{
+  mix-blend-mode: difference;
+  z-index: 100;
+  background-color: transparent;
+}
+#test{
+  font-family:"kepler-std-semicondensed-dis";
+}
+.fade-in{
+  animation: fadeIn ease 20s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+#top1{
+    padding: 10px 16px;
+    background-color: rgb(67, 236, 109);
+}
+
+/* html {
+  font-size: 10px;
+} */
+
+body {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+section {
+  padding: 12.5%;
+  width: 100%;
+}
+#container1 {
+    height:800px;
+    padding-top: 380px;
+    padding-bottom: 20px;
+    width:100%;
+    font-family: 'Open Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    background-color: rgb(20, 19, 19); 
+    color:  #FF5A5A;
+    font-family: "Press Start 2P","DotGothic16","ＭＳ Ｐゴシック";
+    text-transform: uppercase;
+    text-align: center;
+    line-height:50px;
+    z-index:1;
+}
+
+#container2{ /* About section */
+    height:800px;
+    font-family: "Space Grotesk" ;
+    line-height: 2;
+    font-size: large;
+    padding-left: 10%;
+    padding-right: 25%;
+    padding-top:5%;
+    background-color: #fefdf7;
+    z-index:1;
+    color:141313;
+}
+#container2 h2{
+  color:black;
+}
+#container2 p{
+  color:#000000;
+}
+.center{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  height:300px;
+  width:300px;
+}
+#container3{ /* work experience section*/
+    height:800px;
+    font-family:'Courier New', Courier, monospace;
+    /* font-family: "Inconsolata"; */
+    font-size: x-large;
+    padding-left: 25%px;
+    padding-right: 10%px;
+    padding-top:5%;
+    color: white;
+    background-color: #141313;
+    text-align:right;
+    z-index:1;
+
+}
+#container3 h3{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container4{ /* Hobby section*/
+    height:900px;
+    font-family: "Space Grotesk";
+    padding-left: 10%px;
+    padding-right: 25%px;
+    padding-top:5%;
+    z-index:1;
+    font-size:larger;
+    background-color: #fefdf7;
+}
+#container4 p{
+
+  color:black;
+}
+#container4 h2{
+  color:black;
+}
+#container5{  
+  padding-left: 25%px;
+  padding-right: 10%px;
+  text-align: right;
+  background-color: #141313;
+}
+#container5 p{
+  font-size: larger;
+  font-family:'Courier New', Courier, monospace;
+}
+#container6{
+  background-color: #fefdf7;
+}
+p {
+  margin-bottom: 2.5em;
+}
+
+
+h2 {
+  font: bold 2.8rem "kepler-std-semicondensed-dis";
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 2em;
+}
+
+nav {
+  mix-blend-mode: difference;
+  z-index: 100;
+}
+nav ul {
+  position: fixed;
+  top: 60px;
+  right: 5px;
+  height: 100vh;
+  visibility: hidden;
+  pointer-events: none;
+  list-style: none;
+  width: 35px;
+}
+nav ul li {
+  font: bold 1.5rem "Work Sans", "Arial Black", Gadget, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.75em 0;
+  writing-mode: vertical-lr;
+}
+nav ul li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+nav.active ul {
+  visibility: visible;
+  pointer-events: initial;
+  transition-delay: 0.2s;
+}
+
+.nav-icon {
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 35px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  transition: background 0.3s;
+  width: 35px;
+}
+.nav-icon span {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  background: rgb(241, 217, 81);
+  display: block;
+  height: 3px;
+  right: 5px;
+  transition: transform 0.3s;
+}
+.nav-icon span:before, .nav-icon span:after {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+}
+.nav-icon span:before {
+  top: -8px;
+}
+.nav-icon span:after {
+  bottom: -8px;
+}
+.active .nav-icon span {
+  transform: rotate(90deg);
+}
+span{
+  border-right: .1em solid;
+  animation: caret 1s steps(1) infinite;
+
+}
+@keyframes caret {
+  50% {
+      border-color: transparent;
+  }
+}
+.accordion{
+	width: 100%;
+	max-width: 1080px;
+	height: 500px;
+	overflow: hidden;
+	margin: 50px auto;
+}
+.accordion ul{
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+}
+.accordion ul li{
+	display: table-cell;
+	vertical-align: bottom;
+	position: relative;
+	width: 25%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition: all 500ms ease;
+    background-size:contain;
+    margin:auto;
+}
+.accordion ul li div{
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+.accordion ul li div a{
+	display: block;
+	height: 630px;
+	width: 100%;
+	position: relative;
+	z-index: 3;
+	vertical-align: bottom;
+	padding: 15px 20px;
+	box-sizing: border-box;
+	color: rgba(255, 255, 255, 0.39);
+  opacity:0;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	transition: all 200ms ease;
+}
+.accordion ul li div a *{
+	opacity: 1;
+	margin: 0;
+	width: 100%;
+	text-overflow: ellipsis;
+	position: relative;
+	z-index: 5;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-transform: translateX(-20px);
+	transform: translateX(-20px);
+	-webkit-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.accordion ul li div a h2{
+    font-family:'kepler-std-semicondensed-dis';
+	text-overflow: clip;
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-bottom: 2px;
+	top: 160px;
+}
+.accordion ul li div a p{
+
+	top: 160px;
+	font-size: 13.5px;
+}
+.accordion ul li:nth-child(1){
+	background-image: url("50gallon.png");
+}
+.accordion ul li:nth-child(2){
+	background-image: url("50gallon2.jpg")
+}
+.accordion ul li:nth-child(3){
+	background-image: url("shrimp2.jpg");
+}
+.accordion ul li:nth-child(4){
+	background-image: url("shrimp1.jpg");
+}
+.accordion ul li:nth-child(5){
+	background-image: url("wabi-kusa.png");
+}
+.accordion ul li:nth-child(6){
+	background-image: url("guacaf.png");
+}
+.accordion ul:hover li{
+	width: 8%;
+}
+.accordion ul:hover li:hover{
+	width: 57%;
+}
+.accordion ul:hover li:hover a{
+	background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a *{
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+@media screen and (max-width: 600px){
+	body{
+		margin: 0;
+	}
+	.accordion{
+		height: auto;
+	}
+	.accordion ul li, .accordion ul li:hover, .accordion ul:hover li, .accordion ul:hover li:hover{
+		position: relative;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		-webkit-transition: none;
+		transition: none;
+	}
+}
+.bar4{
+  position: fixed;
+  width: 5px;
+  height: 100px;
+  background-color: #FF5A5A;
+  bottom: 0;
+  margin: 6px 12px;
+  z-index:10;
+}
+.social{
+  position: fixed;
+  left:10px;
+  bottom: 110px;
+
+}
+.social img{
+  width:24px;
+  margin-top:3px;
+  display:block;
+}
+.contactBtn {
+  color: #ffffff !important;
+  text-transform: uppercase;
+  background: #ffffff00;
+  padding: 20px;
+  border: 4px solid #ffffff !important;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  }
+  .contactBtn:hover {
+    color: #FF5A5A !important;
+    border-radius: 50px;
+    border-color: #FF5A5A !important;
+    transition: all 0.3s ease 0s;
+    }
+#footer{
+  font-family: 'Courier New', Courier, monospace;
+  color:rgb(255, 255, 255);
+  text-align: center;
+}
