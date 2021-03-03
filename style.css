@@ -86,10 +86,10 @@ section {
 }
 
 #about{ /* About section */
-    height:800px;
+    height:200vm;
     font-family: "Space Grotesk" ;
     line-height: 2;
-    font-size: large;
+    font-size: 1vm;
     padding-top:5%;
     color:#000000;
     z-index:1;
