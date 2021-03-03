@@ -60,6 +60,10 @@ section {
   padding: 12.5%;
   width: 100%;
 }
+.white{
+  background-color: #fefdf7;
+
+}
 #container1 {
     height:800px;
     padding-top: 380px;
@@ -93,10 +97,9 @@ section {
 #container2 p{
   color:#000000;
 }
-.center{
+.left{
   display:block;
-  margin-left:auto;
-  margin-right:auto;
+
   height:300px;
   width:300px;
 }
