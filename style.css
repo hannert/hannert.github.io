@@ -90,12 +90,10 @@ section {
     font-family: "Space Grotesk" ;
     line-height: 2;
     font-size: large;
-    background-color: #fefdf7;
-
     padding-top:5%;
-
+    color:#000000;
     z-index:1;
-    color:141313;
+
 }
 #container2 h2{
   color:black;
