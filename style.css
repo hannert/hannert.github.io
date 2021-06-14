@@ -280,7 +280,6 @@ span{
 	width: 100%;
 	position: relative;
 	z-index: 3;
-	vertical-align: bottom;
 	padding: 15px 20px;
 	box-sizing: border-box;
 	color: rgba(255, 255, 255, 0.39);
@@ -317,23 +316,21 @@ span{
 	font-size: 13.5px;
 }
 .accordion ul li:nth-child(1){
-	background-image: url("50gallon.png");
+	background-image: url("Images/50gallon.png");
 }
 .accordion ul li:nth-child(2){
-	background-image: url("50gallon2.jpg")
+	background-image: url("Images/50gallon2.jpg")
 }
 .accordion ul li:nth-child(3){
-	background-image: url("shrimp2.jpg");
+	background-image: url("Images/shrimp2.jpg");
 }
 .accordion ul li:nth-child(4){
-	background-image: url("shrimp1.jpg");
+	background-image: url("Images/shrimp1.jpg");
 }
 .accordion ul li:nth-child(5){
-	background-image: url("wabi-kusa.png");
+	background-image: url("Images/wabi-kusa.png");
 }
-.accordion ul li:nth-child(6){
-	background-image: url("guacaf.png");
-}
+
 .accordion ul:hover li{
 	width: 8%;
 }
