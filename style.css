@@ -316,19 +316,19 @@ span{
 	font-size: 13.5px;
 }
 .accordion ul li:nth-child(1){
-	background-image: url("Images/50gallon.png");
+	background-image: url("images/50gallon.png");
 }
 .accordion ul li:nth-child(2){
-	background-image: url("Images/50gallon2.jpg")
+	background-image: url("images/50gallon2.jpg")
 }
 .accordion ul li:nth-child(3){
-	background-image: url("Images/shrimp2.jpg");
+	background-image: url("images/shrimp2.jpg");
 }
 .accordion ul li:nth-child(4){
-	background-image: url("Images/shrimp1.jpg");
+	background-image: url("images/shrimp1.jpg");
 }
 .accordion ul li:nth-child(5){
-	background-image: url("Images/wabi-kusa.png");
+	background-image: url("images/wabi-kusa.png");
 }
 
 .accordion ul:hover li{
