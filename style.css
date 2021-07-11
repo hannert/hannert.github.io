@@ -62,15 +62,19 @@ section {
 }
 .white{
   background-color: #fefdf7;
+  text-align:left;
+
   padding-left: 20%;
-  padding-right: 35%;
+  padding-right: 20%;
 }
 .black{
   background-color: #141313;
-  padding-left: 35%px;
-  padding-right: 20%px;
+  text-align:left;
+
+  padding-left: 20%;
+  padding-right: 20%;
 }
-#container1 {
+#container1 { /* Typewriter part */
     height:800px;
     padding-top: 380px;
     padding-bottom: 20px;
@@ -86,10 +90,10 @@ section {
 }
 
 #about{ /* About section */
-    height:200vm;
+    height:100vm;
     font-family: "Space Grotesk" ;
     line-height: 2;
-    font-size: 1vm;
+    font-size: 100%;
     padding-top:5%;
     color:#000000;
     z-index:1;
@@ -101,11 +105,9 @@ section {
 #about p{
   color:#000000;
 }
-.left{
-  display:block;
-
-  height:300px;
-  width:300px;
+.image{
+  height:50%;
+  width:50%;
 }
 #skills{ /* work experience section*/
     height:800px;
@@ -114,7 +116,7 @@ section {
     font-size: x-large;
     padding-top:5%;
     color: white;
-    text-align:right;
+    /* text-align:right; */
     z-index:1;
 
 }
