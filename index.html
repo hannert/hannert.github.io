@@ -18,14 +18,14 @@
   </head>
 
   <body>
-    <section id="container1">
-      <div id = "introduction">
-        <h1>Hi!</h1> 
-        <script src = "js/typerwriter.js"></script>
+    <section id="introduction">
+      <div id="typewriter">
+        <h1 id="typewriterObj">Hi!</h1> 
+        <script src="js/typerwriter.js"></script>
       </div>
     </section>
-    <section id="about" class = "white">
-      <div id = "aboutText">
+    <section id="about" class="white">
+      <div id="aboutText">
           <h2>About.</h2>
           <div>
             <div>
@@ -35,7 +35,7 @@
               In my free time, I like to listen to music, exercise and play video games.
               </p>
             </div>          
-            <img src = "images/photoSelf.jpg" alt = "myself" class = "image">      
+            <img src="images/photoSelf.jpg" alt="myself" class="image">      
           </div>
         </div>
     </section>
@@ -48,8 +48,8 @@
         </div>
       </div>
     </section>
-    <section id="skills" class = "white">
-      <div id = "work">
+    <section id="skills" class="white">
+      <div id="work">
         <a id= "work"></a>
         <h2>Skills.</h2>
           <ul>
@@ -69,12 +69,16 @@
         </ul>
       </div>
     </section>
-    <section id="hobbies" class = "black">
-      <div id = "hobbiesTxt">
+    <section id="hobbies" class="black">
+      <div id="hobbiesTxt">
       <h2 >Hobbies.</h2>
       <p>In my free time, I like to learn about plants and animals. I have taken to aquariums, especially to dwarf shrimp. I also like to aquascape, which is a fancy term for underwater gardening.</p>
       </div>
-        <div class="accordion">
+      <div id="hobbiesGallery" class="gallery">
+        <img src="images/50gallon.jpg" class="image">
+
+      </div>
+        <!-- <div class="accordion">
             <ul>
                 <li>
                     <div>
@@ -117,9 +121,10 @@
               </div>
             </li>
             </ul>
-        </div>
+        </div> -->
+      
     </section>
-    <section id = "contact" class = "white">
+    <section id="contact" class="white">
       <div id ="contactTxt">
         <h2>Contact me.</h2>
         <p>Want to get in touch with me? Shoot me an email.</p>
@@ -132,21 +137,21 @@
     </section>
 
   </body>
-    <div id = "contactInfo">
-        <div class = "bar4"></div>
-        <div class = "social">
+    <div id="contactInfo">
+        <div class="bar4"></div>
+        <div class="social">
             <a href="https://www.linkedin.com/in/han-lin-53a2181aa/" target="_blank" rel="noopener noreferrer">
-                <img src = "images/linkedIn.png" alt = "linkedIn">
+                <img src="images/linkedIn.png" alt="linkedIn">
             </a>
             <a href="mailto:han.lin@stonybrook.edu" target="_blank" rel="noopener noreferrer">
-              <img src = "images/mail.png" alt = "mail">
+              <img src="images/mail.png" alt="mail">
             </a>
             <a href="https://github.com/hannert" target="_blank" rel="noopener noreferrer">
-              <img src = "images/GitHub-Mark-64px.png" alt = "gitHub">
+              <img src="images/GitHub-Mark-64px.png" alt="gitHub">
             </a>
         </div>
     </div>
-    <div id = "footer">
+    <div id="footer">
         <p><br />Copyright &copy; Han Lin 2021</p>
     </div>
   <link rel="stylesheet" type="text/css" href="css/style.css" />

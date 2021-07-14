@@ -27,25 +27,7 @@
   outline: 0;
   -webkit-font-smoothing: antialiased;
 } 
-#topName{
-  mix-blend-mode: difference;
-  z-index: 100;
-  background-color: transparent;
-}
-#test{
-  font-family:"kepler-std-semicondensed-dis";
-}
-.fade-in{
-  animation: fadeIn ease 20s;
-}
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-#top1{
-    padding: 10px 16px;
-    background-color: rgb(67, 236, 109);
-}
+
 
 body {
   background: rgb(0, 0, 0);
@@ -72,10 +54,10 @@ section {
   padding-left: 20%;
   padding-right: 20%;
 }
-#container1 { /* Typewriter part */
+#introduction { /* Typewriter part */
     /* height:800px; */
-    padding-top: 380px;
-    padding-bottom: 20px;
+    padding-top: 44vh;
+    padding-bottom: 44vh;
     width:100%;
     font-family: 'Open Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     background-color: rgb(20, 19, 19); 
@@ -85,6 +67,11 @@ section {
     text-align: center;
     line-height:50px;
     z-index:1;
+}
+@keyframes caret {
+  50% {
+      border-color: transparent;
+  }
 }
 
 #about{ /* About section */
@@ -131,6 +118,13 @@ section {
 }
 #hobbies h2{
 }
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
 #contact{  
   text-align: right;
 
@@ -191,12 +185,12 @@ nav.active ul {
   background: transparent;
   cursor: pointer;
   display: inline-block;
-  height: 35px;
+  height: 5vh;
   position: fixed;
   top: 15px;
   right: 15px;
   transition: background 0.3s;
-  width: 35px;
+  width: 5vh;
 }
 .nav-icon span {
   position: absolute;
@@ -231,133 +225,11 @@ span{
   animation: caret 1s steps(1) infinite;
 
 }
-@keyframes caret {
-  50% {
-      border-color: transparent;
-  }
-}
-.accordion{
-	width: 100%;
-	max-width: 1080px;
-	height: 500px;
-	overflow: hidden;
-	margin: 50px auto;
-}
-.accordion ul{
-	width: 100%;
-	display: table;
-	table-layout: fixed;
-	margin: 0;
-	padding: 0;
-}
-.accordion ul li{
-	display: table-cell;
-	vertical-align: bottom;
-	position: relative;
-	width: 25%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: center center;
-	transition: all 500ms ease;
-    background-size:contain;
-    margin:auto;
-}
-.accordion ul li div{
-	display: block;
-	overflow: hidden;
-	width: 100%;
-}
-.accordion ul li div a{
-	display: block;
-	height: 630px;
-	width: 100%;
-	position: relative;
-	z-index: 3;
-	padding: 15px 20px;
-	box-sizing: border-box;
-	color: rgba(255, 255, 255, 0.39);
-  opacity:0;
-	text-decoration: none;
-	font-family: 'Lato', sans-serif;
-	transition: all 200ms ease;
-}
-.accordion ul li div a *{
-	opacity: 1;
-	margin: 0;
-	width: 100%;
-	text-overflow: ellipsis;
-	position: relative;
-	z-index: 5;
-	white-space: nowrap;
-	overflow: hidden;
-	-webkit-transform: translateX(-20px);
-	transform: translateX(-20px);
-	-webkit-transition: all 400ms ease;
-	transition: all 400ms ease;
-}
-.accordion ul li div a h2{
-    font-family:'kepler-std-semicondensed-dis';
-	text-overflow: clip;
-	font-size: 24px;
-	text-transform: uppercase;
-	margin-bottom: 2px;
-	top: 160px;
-}
-.accordion ul li div a p{
 
-	top: 160px;
-	font-size: 13.5px;
-}
-.accordion ul li:nth-child(1){
-	background-image: url("images/50gallon.png");
-}
-.accordion ul li:nth-child(2){
-	background-image: url("images/50gallon2.jpg")
-}
-.accordion ul li:nth-child(3){
-	background-image: url("images/shrimp2.jpg");
-}
-.accordion ul li:nth-child(4){
-	background-image: url("images/shrimp1.jpg");
-}
-.accordion ul li:nth-child(5){
-	background-image: url("images/wabi-kusa.png");
-}
-
-.accordion ul:hover li{
-	width: 8%;
-}
-.accordion ul:hover li:hover{
-	width: 57%;
-}
-.accordion ul:hover li:hover a{
-	background: rgba(0, 0, 0, 0.4);
-}
-.accordion ul:hover li:hover a *{
-	opacity: 1;
-	-webkit-transform: translateX(0);
-	transform: translateX(0);
-}
-@media screen and (max-width: 600px){
-	body{
-		margin: 0;
-	}
-	.accordion{
-		height: auto;
-	}
-	.accordion ul li, .accordion ul li:hover, .accordion ul:hover li, .accordion ul:hover li:hover{
-		position: relative;
-		display: table;
-		table-layout: fixed;
-		width: 100%;
-		-webkit-transition: none;
-		transition: none;
-	}
-}
 .bar4{
   position: fixed;
-  width: 5px;
-  height: 100px;
+  width: 1vh;
+  height: 8vh;
   background-color: #FF5A5A;
   bottom: 0;
   margin: 6px 12px;
@@ -366,11 +238,12 @@ span{
 .social{
   position: fixed;
   left:10px;
-  bottom: 110px;
+  bottom: 10vh;
 
 }
 .social img{
-  width:24px;
+  width: 5vh;
+  height: 5vh;
   margin-top:3px;
   display:block;
 }
