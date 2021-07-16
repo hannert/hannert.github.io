@@ -1,11 +1,19 @@
+const tempDiv = document.getElementById("temperature");
+const weatherGraphic = document.getElementById("weatherGraphic");
+const weatherCondition = document.getElementById("condition");
+
 function changeText(text) {
-    let div = document.getElementById("temperature");
-    div.innerHTML = text;
+    tempDiv.innerHTML = text;
 }
 
-let key = '915518152d67549280c3bbfc67ef45d2';
+function changeGraphic(weather) {
+    $(".graphic").attr("src", "../weatherGraphics/" + weather + ".png");
+}
 
-const weatherAPI = 'https://api.openweathermap.org/data/2.5/weather?q=Brooklyn&units=imperial&appid=915518152d67549280c3bbfc67ef45d2';
+
+let key = '61a5bfd15f7988ba17e22c7fb80dff28';
+
+const weatherAPI = 'https://api.openweathermap.org/data/2.5/weather?q=Brooklyn&units=imperial&appid=' + key;
 
 function getWeatherData(){
     let request = new XMLHttpRequest();
@@ -14,9 +22,12 @@ function getWeatherData(){
     console.log("Json Updated" + ", currentTime: " + currentTime.getHours() + ":" + currentTime.getMinutes());
     request.send();
     request.onload = function(){
-    let weather = JSON.parse(this.response);
-    let weatherTemp = weather.main.temp;
-    changeText(weatherTemp);
+    let weatherData = JSON.parse(this.response);
+    let weatherTemp = weatherData.main.temp;
+    let weatherConditionTemp = weatherData.weather[0].main;
+    changeText(Math.round(weatherTemp) + "°f");
+    changeGraphic(weatherConditionTemp);
+    weatherCondition.innerHTML = weatherConditionTemp;
     }
 }
 

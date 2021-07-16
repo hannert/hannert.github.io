@@ -54,8 +54,13 @@ section {
   padding-left: 20%;
   padding-right: 20%;
 }
+@keyframes caret {
+  50% {
+      border-color: transparent;
+  }
+}
 #introduction { /* Typewriter part */
-    /* height:800px; */
+
     padding-top: 44vh;
     padding-bottom: 44vh;
     width:100%;
@@ -68,14 +73,9 @@ section {
     line-height:50px;
     z-index:1;
 }
-@keyframes caret {
-  50% {
-      border-color: transparent;
-  }
-}
+
 
 #about{ /* About section */
-    /* height:100vm; */
     font-family: "Space Grotesk" ;
     line-height: 2;
     font-size: 100%;
@@ -84,27 +84,26 @@ section {
     z-index:1;
 
 }
-#about h2{
-  color:black;
-}
-#about p{
-  color:#000000;
-}
+  #about h2{
+    color:black;
+  }
+  #about p{
+    color:#000000;
+  }
 .image{
   height:50%;
   width:50%;
 }
 #skills{ /* work experience section*/
-    /* height:800px; */
     font-family:"Space Grotesk", 'Courier New', Courier, monospace;
     font-size: x-large;
     padding-top:5%;
     z-index:1;
 
 }
-#skills h3{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+  #skills h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
 #hobbies{ /* Hobby section*/
     /* height:900px; */
@@ -114,10 +113,7 @@ section {
     font-size:larger;
 
 }
-#hobbies p{
-}
-#hobbies h2{
-}
+
 
 .gallery{
   display: flex;
@@ -156,7 +152,7 @@ nav ul {
   position: fixed;
   top: 60px;
   right: 5px;
-  height: 100vh;
+  height: 90vh;
   visibility: hidden;
   pointer-events: none;
   list-style: none;
@@ -185,12 +181,12 @@ nav.active ul {
   background: transparent;
   cursor: pointer;
   display: inline-block;
-  height: 5vh;
+  height: 5vmin;
   position: fixed;
   top: 15px;
   right: 15px;
   transition: background 0.3s;
-  width: 5vh;
+  width: 5vmin;
 }
 .nav-icon span {
   position: absolute;

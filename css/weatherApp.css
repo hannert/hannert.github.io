@@ -1,5 +1,5 @@
 body{
-    background-color: orange;  
+    background-color: #fff9ee;  
     overflow-wrap: break-word;
 }
 .mainSection{
@@ -8,6 +8,31 @@ body{
     text-align: center; 
     font-family: 'Kumbh Sans';
 }
-.mainSection h2{
-   
+
+#weatherGraphic{
+
+    display: block;
+    margin:auto;
 }
+
+.backBtn{
+    width: 0;
+    height: 0;
+    left: 1vmax;
+    border-right: 1vmax solid black;
+    border-top: .5vmax solid transparent;
+    border-bottom: .5vmax solid transparent;
+    position:absolute;
+}
+    .backBtn:hover{
+        color: #FF5A5A !important;
+        border-right: 1.4vmax solid #FF5A5A;
+        border-top: 0.7vmax solid transparent;
+        border-bottom: 0.7vmax solid transparent;
+        transition: all 0.3s ease 0s;
+    }
+#footer{
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(0, 0, 0);
+    text-align: center;
+  }
