@@ -54,18 +54,12 @@ section {
   padding-left: 20%;
   padding-right: 20%;
 }
-@keyframes caret {
-  50% {
-      border-color: transparent;
-  }
-}
+
 #introduction { /* Typewriter part */
-    animation: caret 1s linear infinite;
     padding-top: 44vh;
     padding-bottom: 44vh;
     width:100%;
     font-family: 'Open Sans', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    background-color: rgb(20, 19, 19); 
     color:  #FF5A5A;
     font-family: "Press Start 2P","DotGothic16","ＭＳ Ｐゴシック";
     text-transform: uppercase;
@@ -73,7 +67,16 @@ section {
     line-height:50px;
     z-index:1;
 }
-
+#typeCursor{
+  border-right: .1em solid;
+  -webkit-animation: caret 1s infinite;
+  animation: caret 1s infinite;
+}
+@keyframes caret {
+  50% {
+      border-color: transparent;
+  }
+}
 
 #about{ /* About section */
     font-family: "Space Grotesk" ;
@@ -95,22 +98,38 @@ section {
   width:50%;
 }
 
-#projects{
-
-}
 
 .projectTags{
   font-family:"Inconsolata";
+  display:flex;
+  flex-wrap: wrap;
+  color: black;
   font-size:small;
+  height:3vmin;
 }
 
 .APITag{
-  background-color:firebrick;
+  background-color:rgb(231, 128, 128);
   text-align:center;
-  border-radius: 0.5vmax;
-  border-width: 1vmax;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
+.HTMLCSSJSTag{
+  background-color:rgb(153, 177, 229);
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
 }
 
+.projectHeader{
+  display:flex;
+  align-items: center;
+}
+.projectDetails{
+  font-family: "Space Grotesk";
+}
 #skills{ /* work experience section*/
     font-family:"Space Grotesk", 'Courier New', Courier, monospace;
     font-size: x-large;
@@ -229,11 +248,6 @@ nav.active ul {
 .active .nav-icon span {
   transform: rotate(90deg);
 }
-span{
-  border-right: .1em solid;
-  animation: caret 1s steps(1) infinite;
-
-}
 
 .bar4{
   position: fixed;
@@ -260,6 +274,7 @@ span{
 .social img:hover{
 
   -webkit-filter: hue-rotate(180deg);
+  filter: hue-rotate(180deg);
 }
 
 .contactBtn {
@@ -278,6 +293,23 @@ span{
     border-color: #FF5A5A !important;
     transition: all 0.3s ease 0s;
     }
+
+.redirectBtn{
+  animation: caret 2s infinite;
+  width: 0;
+  height: 0;
+  border-left: 1vmax solid rgb(255, 255, 255);
+  border-top: .5vmax solid transparent;
+  border-bottom: .5vmax solid transparent;
+  height:auto;
+}
+  .redirectBtn:hover{
+      color: #FF5A5A !important;
+      border-left: 1.4vmax solid #FF5A5A;
+      border-top: 0.7vmax solid transparent;
+      border-bottom: 0.7vmax solid transparent;
+      transition: all 0.3s ease 0s;
+  }
 #footer{
   font-family: 'Courier New', Courier, monospace;
   color:rgb(255, 255, 255);
