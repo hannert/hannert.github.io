@@ -60,7 +60,7 @@ section {
   }
 }
 #introduction { /* Typewriter part */
-
+    animation: caret 1s linear infinite;
     padding-top: 44vh;
     padding-bottom: 44vh;
     width:100%;
@@ -94,6 +94,23 @@ section {
   height:50%;
   width:50%;
 }
+
+#projects{
+
+}
+
+.projectTags{
+  font-family:"Inconsolata";
+  font-size:small;
+}
+
+.APITag{
+  background-color:firebrick;
+  text-align:center;
+  border-radius: 0.5vmax;
+  border-width: 1vmax;
+}
+
 #skills{ /* work experience section*/
     font-family:"Space Grotesk", 'Courier New', Courier, monospace;
     font-size: x-large;
@@ -113,13 +130,11 @@ section {
     font-size:larger;
 
 }
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
 
-
-.gallery{
-  display: flex;
-  flex-wrap: wrap;
-
-}
+  }
 
 #contact{  
   text-align: right;
@@ -129,9 +144,7 @@ section {
   font-size: larger;
   font-family:"Space Grotesk",'Courier New', Courier, monospace;
 }
-#container6{
-  background-color: #fefdf7;
-}
+
 p {
   margin-bottom: 2.5em;
 }
@@ -156,10 +169,10 @@ nav ul {
   visibility: hidden;
   pointer-events: none;
   list-style: none;
-  width: 35px;
+  width: 5vh;
 }
 nav ul li {
-  font: bold 1.5rem "Work Sans", "Arial Black", Gadget, sans-serif;
+  font: bold 1.9vmin "Work Sans", "Arial Black", Gadget, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 0.75em 0;
@@ -243,6 +256,12 @@ span{
   margin-top:3px;
   display:block;
 }
+
+.social img:hover{
+
+  -webkit-filter: hue-rotate(180deg);
+}
+
 .contactBtn {
   color: #000000 !important;
   text-transform: uppercase;

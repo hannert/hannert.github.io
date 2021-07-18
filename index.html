@@ -4,7 +4,7 @@
   <title>Han Lin</title>
 
   <nav id="nav"><button class="nav-icon" id="nav-icon"><span></span></button>
-    <ul>
+    <ul id="navText">
         <li><a href="#about">about</a></li>
         <li><a href="#projects">projects</a></li>
         <li><a href="#skills">skills</a></li>
@@ -45,7 +45,14 @@
         <h2>Projects.</h2>
         <div class="projectClass">
           <h3>Weather Web Application</h3>
-          <p><a href="html/weatherApp.html">Here!</a></p>
+            <div class="projectTags">
+              <span class="APITag">API</span>
+            </div>
+          <details>
+            <summary></summary>
+            <p>Uses the OpenWeatherMaps API in order to retreive and parse current weather data for Brooklyn, NY. </p>
+            <a class="redirectBtn" href="html/weatherApp.html"></a>
+          </details>
         </div>
       </div>
     </section>
@@ -114,6 +121,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inconsolata&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet"> 
-  <script src="js/menu.js"></scrip>
+  <script src="js/menu.js"></script>
   <script src="js/query-3.5.1.js"></script>
 </html>

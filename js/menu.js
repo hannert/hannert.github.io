@@ -15,3 +15,5 @@ for(var i = 0; i < navlinks.length; i++) {
       toggleNav();
   });
 }
+
+$(window).resize($("navText").fitText(0.38));
