@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <section id="introduction">
+    <section id="introduction" class ="black">
       <div id="typewriter">
         <h1 id="typewriterObj"> </h1> 
         <script src="js/typerwriter.js"></script>
@@ -36,7 +36,7 @@
               In my free time, I like to listen to music, exercise and play video games.
               </p>
             </div>          
-            <img src="images/photoSelf.jpg" alt="myself" class="image">      
+            <img src="images/photoSelf.jpg" alt="myself" class="image" width="200px" height="200px">      
           </div>
         </div>
     </section>
@@ -69,15 +69,23 @@
             <h3>Languages</h3><br />
             <li>Java</li>
             <li>Python</li>
+            <li>HTML, CSS, JS</li>
           </ul>
         <br />
         <ul>
           <h3>Courses Taken</h3><br />
+          <li>Programming Abstractions : CSE 216</li>
           <li>Foundations of Computer Science : CSE 215</li>
           <li>Data Structures : CSE 214 </li>
           <li>Introduction to Object-Oriented Programming : CSE 114 </li>
           <li>Computer Science Principles : CSE 101 </li>
 
+        </ul><br />
+        <ul>
+          <h3>Currently Taking</h3>
+          <li>Systems Fundamentals I : CSE 220</li>
+          <li>Introduction to the Theory of Computation : CSE 303</li>
+          <li>Analysis of Algorithms : CSE 373</li>
         </ul>
       </div>
     </section>
@@ -87,15 +95,21 @@
       <p>In my free time, I like to learn about plants and animals. I have taken to aquariums, especially to dwarf shrimp. I also like to aquascape, which is a fancy term for underwater gardening.</p>
       </div>
       <div id="hobbiesGallery" class="gallery">
-        <img src="images/50gallon.jpg" class="image">
+        <div class="hoverableImage">
+          <img src="images/50gallon.jpg" class="HIimage">
+          <div class="hoverableImageText">
+            <p>This is my high tech 50 gallon aquascape. I was inspired by the jungle style of aquascaping of where plant growth is rampant and has that "jungle" look</p>
+          </div>
+        </div>
+<!-- <img src="images/shrimp1.jpg" class="image"> -->
       </div>
 
     </section>
     <section id="contact" class="white">
       <div id ="contactTxt">
         <h2>Contact me.</h2>
-        <p>Want to get in touch with me? Shoot me an email.</p>
-        <div class="button_cont" align="right">
+        <p align="center">Want to get in touch with me? Shoot me an email.</p>
+        <div class="button_cont" align="center">
           <a class="contactBtn" href="mailto:han.lin@stonybrook.edu" target="_blank" rel="nofollow noopener">
             Here!
           </a>
@@ -126,5 +140,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inconsolata&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet"> 
   <script src="js/menu.js"></script>
+  
   <script src="js/query-3.5.1.js"></script>
 </html>

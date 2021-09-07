@@ -30,7 +30,7 @@
 
 
 body {
-  background: rgb(0, 0, 0);
+  background: #000000;
   color: rgb(255, 255, 255);
 }
 
@@ -93,11 +93,31 @@ section {
   #about p{
     color:#000000;
   }
-.image{
-  height:50%;
-  width:50%;
+
+
+.HIimage{
+  width:35vmax;
+  height: auto;
+  
+}
+/* .hoverableImage{
+  width: 50%;
+  height: 50%;
+} */
+
+.hoverableImageText{
+  opacity: 0;
+  top:50%;
+  left:50%;
 }
 
+
+/* .HIimage:hover{
+  opacity: 0.3;
+}
+.HIimage:hover .hoverableImageText{
+  opacity: 1;
+} */
 
 .projectTags{
   font-family:"Inconsolata";
@@ -174,6 +194,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 5px;
   margin-bottom: 2em;
+  text-align: center;
 }
 
 nav {
@@ -278,6 +299,8 @@ nav.active ul {
 }
 
 .contactBtn {
+  
+  text-align: center;
   color: #000000 !important;
   text-transform: uppercase;
   background: #ffffff00;
