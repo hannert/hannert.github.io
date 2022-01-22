@@ -205,7 +205,7 @@ nav ul {
   position: fixed;
   top: 60px;
   right: 5px;
-  height: 90vh;
+  /* height: 90vh; */
   visibility: hidden;
   pointer-events: none;
   list-style: none;
@@ -222,7 +222,10 @@ nav ul li a {
     color: inherit;
     text-decoration: none;
   }
-  
+.nav-button:hover {
+  color:#FF5A5A;
+  transition: all 0.5s ease;
+}
 nav.active ul {
   visibility: visible;
   pointer-events: initial;
@@ -245,7 +248,7 @@ nav.active ul {
   position: absolute;
   top: 15px;
   left: 5px;
-  background: rgb(241, 217, 81);
+  background: rgb(255, 255, 255);
   display: block;
   height: 3px;
   right: 5px;
@@ -269,6 +272,7 @@ nav.active ul {
 .active .nav-icon span {
   transform: rotate(90deg);
 }
+
 
 .bar4{
   position: fixed;
@@ -337,4 +341,80 @@ nav.active ul {
   font-family: 'Courier New', Courier, monospace;
   color:rgb(255, 255, 255);
   text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  nav {
+    mix-blend-mode: difference;
+    z-index: 100;
+  }
+  nav ul {
+    position: fixed;
+    align-items: center;
+    top: 60px;
+    right: 5px;
+    height: 50px;
+    visibility: hidden;
+    pointer-events: none;
+    list-style: none;
+    width: 5vh;
+  }
+  nav ul li {
+    font: bold 2vmin "Work Sans", "Arial Black", Gadget, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.75em 0;
+    writing-mode: vertical-lr;
+  }
+  nav ul li a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+  nav.active ul {
+    visibility: visible;
+    pointer-events: initial;
+    transition-delay: 0.2s;
+  }
+  
+  .nav-icon {
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    position: fixed;
+    top: 3vmin;
+    right: 15px;
+    transition: background 0.3s;
+    width: 5vmin;
+  }
+  .nav-icon span {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    background: rgb(241, 217, 81);
+    display: block;
+    height: 3px;
+    right: 5px;
+    transition: transform 0.3s;
+  }
+  .nav-icon span:before, .nav-icon span:after {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+  }
+  .nav-icon span:before {
+    top: -8px;
+  }
+  .nav-icon span:after {
+    bottom: -8px;
+  }
+  .active .nav-icon span {
+    transform: rotate(90deg);
+  }
 }

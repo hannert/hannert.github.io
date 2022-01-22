@@ -16,4 +16,4 @@ for(var i = 0; i < navlinks.length; i++) {
   });
 }
 
-$(window).resize($("navText").fitText(0.38));
+// $(window).resize($("navText").fitText(0.38));
