@@ -142,7 +142,41 @@ section {
   height: 16px;
   margin-right:10px;
 }
-
+.MongoTag{
+  background-color:#023430;
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
+.ExpressTag{
+  background-color:#EEBAA5;
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
+.ReactTag{
+  background-color:#149ECA;
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
+.NodeTag{
+  background-color:#026E00;
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
+.ReduxTag {
+  background-color:#7248B6;
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
 .projectHeader{
   display:flex;
   align-items: center;
@@ -150,6 +184,10 @@ section {
 .projectDetails{
   font-family: "Space Grotesk";
 }
+.projectBody{
+  margin-bottom: 20px;
+}
+
 #skills{ /* work experience section*/
     font-family:"Space Grotesk", 'Courier New', Courier, monospace;
     font-size: x-large;
@@ -331,11 +369,8 @@ nav.active ul {
   height:auto;
 }
   .redirectBtn:hover{
-      color: #FF5A5A !important;
-      border-left: 1.4vmax solid #FF5A5A;
-      border-top: 0.7vmax solid transparent;
-      border-bottom: 0.7vmax solid transparent;
-      transition: all 0.3s ease 0s;
+    color: #FF5A5A !important;
+    transition: all 0.3s ease 0s;
   }
 #footer{
   font-family: 'Courier New', Courier, monospace;
