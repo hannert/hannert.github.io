@@ -32,11 +32,15 @@
             <div>
             <p>Welcome to my website! I am a recent gruadate of Stony Brook University with a Bachelors Degree in Computer Science. 
               Based in Brooklyn, I hope to learn about, code and create programs in the future. 
-              I am interested in video game design and development. I’m currently learning and practicing Java and Python. 
+              I am interested in video game design and development. I’m currently learning more about the Unity game engine and creating my own game. 
               In my free time, I like to listen to music, exercise and play video games.
               </p>
-            </div>          
-            <img src="images/photoSelf.jpg" alt="myself" class="image" width="200px" height="200px">      
+            </div>
+            <div class="AboutImageBox">
+              <img src="images/Bust.png" alt="myself" class="AboutImage">  
+              <div class="ImageCaption"><p>That's me!</p></div>
+            </div>
+                
           </div>
         </div>
     </section>
@@ -61,30 +65,45 @@
               <div class="NodeTag">NodeJS</div>
               <div class="ReduxTag">Redux</div>
             </div>
-            <details class="projectDetails">
+            <details class="projectDetails" open>
               <summary>Summary</summary>
-              <p>A MERN stack web application aimed at provided a map editing service online. Geared towards GeoJSON files as well as 
+              <br/>
+              <div class="projectImageBox">
+                <img class="projectImage" src="images/MapperMan.gif" />
+              </div>
+              <p class="projectSummary">A MERN stack web application aimed at provided a map editing service online. Geared towards GeoJSON files as well as 
                 SHP/DBF files, MapperMan allows users to import, edit, and share their maps with others using MapperMan. 
               </p>
             </details>
           </div>
         </div>
 
-
+        <br/>
+        
         <div class="projectClass">
           <div class="projectHeader">
-            <h3 style="margin-right:10px">MapperMan Web Application</h3> 
-            <a class="redirectBtn" href="https://mapperman.netlify.app/"></a>
+            <h3 style="margin-right:10px">Unity Game (In Development)</h3> 
+            <a class="redirectBtn" href="https://github.com/hannert/Personal-Project"></a>
 
           </div>
           <div class="projectBody">
             <div class="projectTags">
+              <div class="UnityTag">Unity</div>
+              <div class="GameDevTag">Game Development</div>
+              <div class="CSTag">C#</div>
               <div class="APITag">API</div>
-              <div class="HTMLCSSJSTag">HTML, CSS, JS</div>
-            </div>
-            <details class="projectDetails">
+            </div>          
+          
+            <details class="projectDetails" open>
               <summary>Summary</summary>
-              <p>Uses the OpenWeatherMaps API in order to retreive and parse current weather data for Brooklyn, NY. </p>
+              <br/>
+              <div class="projectImageBox">
+                <img class="projectImage" src="images/AlphaVerGame.gif" />
+              </div>
+              <p class="projectSummary">A project of mine written in C# and ran on the Unity game engine. 
+                Employing programming patterns such as state machines and observer patterns to create a game.
+                Currently in it's beginning stages (A robust player movement system is in development).
+              </p>
             </details>
           </div>
         </div>
@@ -131,12 +150,14 @@
       <h2 >Hobbies.</h2>
       <p>In my free time, I like to learn about plants and animals. I have taken to aquariums, especially to dwarf shrimp. I also like to aquascape, which is a fancy term for underwater gardening.</p>
       </div>
-      <div id="hobbiesGallery" class="gallery">
-        <div class="hoverableImage">
-          <img src="images/50gallon.jpg" class="HIimage">
-          <div class="hoverableImageText">
-            <p>This is my high tech 50 gallon aquascape. I was inspired by the jungle style of aquascaping of where plant growth is rampant and has that "jungle" look</p>
-          </div>
+      <div class="HobbiesImages">
+        <div class="HobbyItem">
+          <img src="images/50gallon.jpg" class="HobbyImage">
+          <p class="HobbyItemText">This is my high tech 50 gallon aquascape. I was inspired by the jungle style of aquascaping of where plant growth is rampant and has that "jungle" look</p>
+        </div>
+        <div class="HobbyItem">
+          <img src="images/shrimp1.jpg" class="HobbyImage">
+          <p class="HobbyItemText">This is a closeup of one of the shrimps I kept, a blue bolt neocardina dwarf shrimp. <b>Shrimp are awesome.</b></p>
         </div>
       </div>
 
@@ -144,6 +165,7 @@
     <section id="contact" class="white">
       <div id ="contactTxt">
         <h2>Contact me.</h2>
+        <p align="center">Open to hire!</p>
         <p align="center">Want to get in touch with me? Shoot me an email.</p>
         <div class="button_cont" align="center">
           <a class="contactBtn" href="mailto:han.lin@stonybrook.edu" target="_blank" rel="nofollow noopener">
@@ -169,7 +191,8 @@
         </div>
     </div>
     <div id="footer"> 
-        <p><br />Copyright &copy; Han Lin 2023</p>
+        <p><br />A rebase of this website into a more modern and extensible framework in in progress.</p>
+        <p>Copyright &copy; Han Lin 2024</p>
     </div>
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">

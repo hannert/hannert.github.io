@@ -94,16 +94,33 @@ section {
     color:#000000;
   }
 
+.AboutImageBox{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.AboutImage{
+  width: 25vmax;
+}
+.ImageCaption{
+  font-size:12px;
+}
 
-.HIimage{
+.HobbyItem{
+  display:flex;
+  padding-bottom: 24px;
+}
+.HobbyImage{
   width:35vmax;
   height: auto;
   
 }
-/* .hoverableImage{
-  width: 50%;
-  height: 50%;
-} */
+.HobbyItemText{
+  padding-top:auto;
+  font-size: 16px;
+  padding-left:12px;
+}
 
 .hoverableImageText{
   opacity: 0;
@@ -111,14 +128,7 @@ section {
   left:50%;
 }
 
-
-/* .HIimage:hover{
-  opacity: 0.3;
-}
-.HIimage:hover .hoverableImageText{
-  opacity: 1;
-} */
-
+ /* Projects Styling */
 .projectTags{
   font-family:"Inconsolata";
   display:flex;
@@ -177,12 +187,48 @@ section {
   height: 16px;
   margin-right:10px;
 }
+.UnityTag{
+  background-color:#62748a;
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
+.CSTag{
+  background-color:#4cc3b5;
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
+.GameDevTag{
+  background-color:#9b4cc3;
+  text-align:center;
+  border-radius: 3px;
+  height: 16px;
+  margin-right:10px;
+}
+
 .projectHeader{
   display:flex;
   align-items: center;
 }
+.projectImageBox{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectImage{
+
+  padding-top:30px;
+  padding-bottom:30px;
+  max-width: 300px;
+}
 .projectDetails{
   font-family: "Space Grotesk";
+}
+.projectSummary{
+  padding-left: 12px;
 }
 .projectBody{
   margin-bottom: 20px;
