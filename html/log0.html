@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>        
+
+  <title>Han Lin - Devlog 00</title>
+
+  <link rel="icon" href="images/favicon.png">
+  <head>
+    <div id="backSection">
+        <a href="../index.html">
+            <img src="../svg/home.svg" class="uiButton">
+        </a>
+    </div>
+    <div id="topSection"> 
+        <a href="#prelude">
+            <img src="../svg/chevron_up.svg" class="uiButton">
+        </a>
+    </div>
+    
+  </head>
+
+  <body>
+
+    <section id="logIntroduction" class="white">
+      <div id="prelude">
+        <h3>00 - The Beginning</h3>
+          <h2>Prelude</h2>
+          <div> 
+            <div>
+            <p>
+                Hello everyone! Recently, I have been developing a game in the Unity engine. I wanted to create a devlog so that I can quantify my work and share the development process with others.
+            </p>
+            <p>
+                Before I had begun developing this specific project, I was always nervous and not confident in coding complex features. Although I had learned a lot from University, I knew that I still had a huge gap in knowledge and knowhow. I wanted to create something that came from the heart. I had a vision to create a game but with my ideas and feel to it, but I was lost. I was aimless and didn’t know how to start, or where to go with development and how I would code these grandeur features such as advanced movement & combat systems with dynamic linking between them.
+            </p>
+
+            <div class="CenteredImageBox">
+              <img src="../images/Log0/youtubeThumbnail.png" class="CenteredImage">  
+              <div class="ImageCaption">
+                <p>YouTube - DaFluffyPotato
+                </p>
+              </div>
+              <div class="ImageCaption">
+                <a href="https://www.youtube.com/watch?v=h1o5UzKfZcQ
+                ">https://www.youtube.com/watch?v=h1o5UzKfZcQ</a>
+              </div>
+              <br/>
+            </div>
+
+            <p>I came across a video on YouTube that outlined a basic process on how to implement almost any feature in a game. That video had inspired me and instilled a confidence that I could also do that. So, I undertook the Create With Code pathway from the Unity Learning resources to get a basic understanding of the Unity editor and its basic capabilities. 
+            </p>
+
+            <p>
+                The learning pathway delves into the ‘primitive’ games where the objective and gameplay loop is simple. I’ll show the ones that I worked on:
+            </p>
+
+
+
+            </div>
+
+                
+          </div>
+        </div>
+    </section>
+    <section id="projects" class ="black">
+      <div id="projectsText">
+        <h2>Unity Learning Pathway</h2>
+        <p>
+            The Unity Create With Code Learning Pathway takes us across multiple small games that give a nice introduction into game development. The pathway is split into prototypes and their associated challenge project. First I would learn what's in the lesson and continuously work on the prototype. When the prototypes are “done” there are challenges that use the knowledge learned prior and builds upon it. 
+        </p>
+        <div>
+            <h3> Lesson 1 - Player Input </h3>
+            <br />
+            <h4>
+                Prototype 1 | Cars
+            </h4>
+            <p>The learning pathway starts off with a simple game that involves the player driving cars and gives a simple rundown of the editor and where the tools are. 
+            </p>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Prototype 1 GIF.gif" class="CenteredImage"> <br/>
+            </div>
+            
+            <p>This project introduces the need and processing of player input in the form of moving the player (A car). These cars are rigidbodies! Which is a term in the physics engine to denote that the object is “physical” and can interact with other rigidbodies (the obstacles: crates, barrels, vehicles).
+            </p>
+
+            <h4>
+                Challenge 1 | Planes
+            </h4>
+            <p>This challenge featured ‘broken’ code that did not work as intended. At first, the no player input was being taken so using what I learned in the Prototype 1, the plane would correctly move throughout the barriers and tilt correctly based on player input. 
+    
+            </p>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Challenge 1 GIF.gif" class="CenteredImage"> <br/>
+            </div>
+            
+            <p>This project introduces the need and processing of player input in the form of moving the player (A car). These cars are rigidbodies! Which is a term in the physics engine to denote that the object is “physical” and can interact with other rigidbodies (the obstacles: crates, barrels, vehicles).
+            </p>
+        </div>
+        <div>
+            <h3> Lesson 2 - Basic Gameplay </h3>
+            <br />
+            <h4>
+                Prototype 2 | Animal Rush
+            </h4>
+
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Prototype 2 GIF.gif" class="CenteredImage"> <br/>
+            </div>
+            
+            <p>The second prototype gets more serious, changing it up with a top down perspective and involves a bit more of a gameplay loop. The player, a farmer, is being overrun by animals! The player can fire a projectile (in this case, a slice of meat) to fill the hunger meter of the incoming enemy and score points when their hunger meter reaches 0. This prototype introduces enemy variety by tweaking variables such as speed, spawn rate, and hunger meter. 
+            </p> 
+            <br/>
+            <p>This game is also where I learnt of player bounding within the context of the game. The player must not move outside of the starting platform or the screen for that matter. Collision detections are also expounded on in this game, how to interface with the interactions between objects in the physics system: The food projectile hitting an animal, and then what to do afterwards. </p>
+
+
+
+            <h4>
+                Challenge 2 | Sending the Dogs out
+            </h4>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Challenge 2 GIF.gif" class="CenteredImage"> <br/>
+            </div>
+            
+            <p>The second challenge was a game about the player sending out a dog to retrieve a ball that falls from the sky. In this case, the dog is considered the projectile and moves away from the player, and also despawns when out of bounds. 
+            </p>
+        </div>
+        <div>
+            <h3> Lesson 3 - Sounds and Effects </h3>
+            <br />
+            <h4>
+                Prototype 3 | Infinite Scroller
+            </h4>
+
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Prototype 3 GIF.gif" class="CenteredImage"> <br/>
+            </div>
+            
+            <p>The third lesson in the learning pathway introduced sounds and effects. In this case, music for the game, player jumping, obstacle hits, etc. This is also where I learned that in game development you’d have to be clever to implement some of the features. For this game, the player is actually just standing still! The only movement the player is responsible for is the vertical jumping to jump over obstacles that come in from the right side and move towards the player. For the infinite scrolling background, it was a still image that was moving and had to be “teleported” back into place where it would seamlessly continue forever. 
+            </p> 
+
+            <h4>
+                Challenge 3 | Infinite Scroller Ver.2
+            </h4>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Challenge 3 GIF.gif" class="CenteredImage"> <br/>
+            </div>
+            
+            <p>The third challenge involves another infinite scroller where the player is a balloon and trying to obtain money whilst avoiding bombs that are also floating. Sound effects were added to the interactions to create meaningful and responsive gameplay: Hitting the top and bottom bounds, bouncing off those bounds, getting hit by the bombs, and collecting the coins. 
+            </p>
+        </div>
+        <div>
+            <h3> Lesson 4 - Gameplay Mechanics </h3>
+            <br />
+            <h4>
+                Prototype 4 | Sumo
+            </h4>
+
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Prototype 4.png" class="CenteredImage"> <br/>
+            </div>
+            
+            <p>This is where it started to get more interesting with the introduction of some camera movement based on input and a more interesting gameplay mechanic. A Sumo game, where everyone is a ball and the player’s goal is to not get pushed off the platform. 
+            </p> 
+            <div class="indented">
+                <p>I liked this project the most. There were a lot of avenues for improvement and variability. For instance, this project allowed for a straightforward way to implement new things/variations. </p>
+            </div>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Prototype 4 GIF.gif" class="CenteredImage"> <br/>
+            </div>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Prototype 4 prefabs.png" class="CenteredImage"> <br/>
+                <div class="ImageCaption">
+                    <p>
+                        An image detailing all of the variations of items in the project (different enemies, different powerups, and even a boss type enemy).
+                    </p>
+            </div>
+
+            <p>I learned from this project that while in the prototyping stages, primitives (basic representations of to-be complex objects) serve an undeniably important purpose. It helped me focus on what was needed, which was the core gameplay since all we’re doing here is manipulating spheres.</p>
+
+            <h4>
+                Challenge 4 | Soccer
+            </h4>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Challenge 4 GIF.gif" class="CenteredImage"> <br/>
+            </div>
+            
+            <p>The third challenge involves another infinite scroller where the player is a balloon and trying to obtain money whilst avoiding bombs that are also floating. Sound effects were added to the interactions to create meaningful and responsive gameplay: Hitting the top and bottom bounds, bouncing off those bounds, getting hit by the bombs, and collecting the coins. 
+            </p>
+        </div>
+        <br/>
+        <h3> Post Unity Learning Pathway Thoughts</h3>
+            <p>
+                Although these lessons were great and I learned a lot, I felt a lot of knowledge was still missing. And that's fine! The course was advertised as beginner level, and I knew that going in. But, almost all of these projects were fill-in-the-blanks. I knew if I wanted to truly learn Unity and what it has to offer, I would have to make a game from scratch myself, all bumps included. 
+            </p>
+            <p>
+                After a good understanding of the basic Unity building blocks, I dived head first in creating my game from a blank slate. 
+            </p>
+        </div>
+      </div>
+    </section>
+    <section class="white">
+        <h2>Tragedy</h2>
+        <p>
+            Diving headfirst into the project, I wanted too much done too quickly, without a good foundation. 
+            I didn’t know what I wanted to do: 
+        </p>
+        <div class="indented">
+            <p>            
+                First person? Third Person? RPG? Fighter?
+            </p>
+        </div>
+        <p> These questions I’ve found should be answered at least a little bit before delving into the development process. </p>
+        
+        <div>
+            <h3>The bad</h3>
+            <p style="text-indent:24px">
+                Beginning with the development of a character controller, I decided to try to make a kinematic player controller, which tells Unity’s physics system that I will handle the physics interactions. I wanted to do this since I was envisioning a complex movement system and thought I needed to do this all on my own (Creating my own physics system). This was a mistake. It was frustrating and I felt like I was bashing my head against the wall as to why some things worked the way they did and most importantly at all, I was trying to do too much too fast. Here are some examples of what was plaguing the development process:
+            </p>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Unwanted Behavior - Wall Collision.gif" class="CenteredImage">  
+                <div class="ImageCaption">
+                  <p>Unwanted wall collision behavior</p>
+                </div>
+                <p class="ImageComment">Player speeds up when walking into the wall and collision is not checked when turning the corner for adjacent walls.</p>
+                <hr> <br/>
+            </div>
+            
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Animator Spaghetti.png" class="CenteredImage">  
+                <div class="ImageCaption">
+                  <p>🍝 The Animator component for the player model</p>
+                </div>
+                <p class="ImageComment">To get the transitions between the states of movement and it's associated animation, I found the Animator component worked well. BUT!
+                    It got very messy very quickly! And that's only the beginning for player animations. To expand on this would be a nightmare, so I decided to look for a better way to implement animations. 
+                    -> Fast forward to now -> Animation trees and separation of animation routes and inverse kinematics which will be part of later devlogs.</p>
+                <hr> <br/>
+            </div>
+            
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Unwanted Behavior - Camera Influence while jumping.gif" class="CenteredImage">  
+                <div class="ImageCaption">
+                  <p>Unwanted camera influence behavior</p>
+                </div>
+                <p class="ImageComment">When the player is in the air, if the camera is rotated and holding the 'W' key, the player moves instantaneously with respect to the Camera's rotation.</p>
+                <hr> <br/>
+            </div>
+
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Funky Behavior - Slopes.gif" class="CenteredImage">  
+                <div class="ImageCaption">
+                  <p>Some good and some bad slope movement behavior</p>
+                </div>
+                <p class="ImageComment">Works sometimes, which is never a good thing. We want it to work all the time. BUT‼ The slope detection worked by sending a raycast downward from the player with a set distance inside the player capsule. (We raycast inside since raycasting doesn't work if the ray is already intersecting/touching the surface we want to test if it is hitting. With the detection in change of surface angle, we take the user input direction and project it onto the slope of the surface the player intends to move on! But! we run into issues when moving onto different slopes from a sloped surface: we clip into the slope itself and actually go down! Something we did not want.</p>
+                <hr> <br/>
+            </div>
+
+
+            <h3>The Good</h3>
+            <p>There were some triumphant moments during this early development, however!</p>
+
+
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Sword.PNG" class="CenteredImage">  
+                <div class="ImageCaption">
+                  <p>A 3d model of a sword I made for the game</p>
+                </div>
+                <p class="ImageComment">Learning and working on a 3D model was fun and gratifying to see work! I think this simple sword does the trick pretty well.</p>
+                <hr> <br/>
+            </div>
+
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Good Behavior - Animation Blend Tree.gif" class="CenteredImage">  
+                <div class="ImageCaption">
+                  <p>Good animation transitions</p>
+                </div>
+                <p class="ImageComment">The transition between idling, walking, and sprinting was something that worked!</p>
+                <hr> <br/>
+            </div>
+
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Good Behavior - Lock on.gif" class="CenteredImage">  
+                <div class="ImageCaption">
+                  <p>Good camera locking behavior</p>
+                </div>
+                <p class="ImageComment">I did get a toggleable lock-on to work, which takes in to account things/objects that are targetable and changes the camera work!</p>
+                <hr> <br/>
+            </div>
+
+            <div class="CenteredImageBox">
+                <img src="../images/Log0/Good Behavior - Animations and Rolling.gif" class="CenteredImage">  
+                <div class="ImageCaption">
+                  <p>Animations, rolling, and lock on</p>
+                </div>
+                <p class="ImageComment">Here is a glimpse as to what Unity's animation blending can do. There are transitions between the different animation states such as idling -> walking -> sprinting -> rolling -> strafing -> rolling -> etc.</p>
+                <hr> <br/>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="black">
+        <h2>Relief</h2>
+        <p>
+            This brings us into the current day, where I am currently developing a movement system that will serve the purposes of my vision.
+        </p>
+        <p>    
+            Starting off the development process, I needed to make a working prototype of how the player will move around and interact with world objects so that I could test other things. 
+        </p>        
+        <p> 
+            I have learned to not bite off more than I can chew and practically scrapped the kinematic player controller and instead moved onto a dynamic player controller, which means the Unity physics engine will do the heavy lifting in dealing with collisions and movement. 
+        </p>
+        <p>
+            To start off, I want to nail the movement and player feel first and foremost so that the basic movement is responsive and works the way it seems like it would work.
+        </p>
+
+        <div class="CenteredImageBox">
+            <img src="../images/Log0/Current Progress.gif" class="CenteredImage">  
+            <div class="ImageCaption">
+              <p>A quick GIF of the current progress</p>
+            </div>
+            <p class="ImageComment"></p>
+        </div>
+
+        <div class="indented">
+            
+            <p>▸ There was more than I intended to be on this log, so I will seperate the current progress into another shorter devlog!</p>
+        </div>
+
+
+        <h3>Afterword</h3>
+        <p style="text-indent:24px">Although development has been going slow by my standards, I plan on turning it up a notch!
+            Part of this devlog is to keep me accountable as well for weekly/bi-weekly updates of tangible results or a problem that I am facing. Perhaps if the project isn't worked on too much, I could share what I have worked on for the week (Other projects).</p>
+        <p>
+            I hope to report in later with good news!
+        </p>
+        <p>If you've made it this far down, thank you for reading it :3</p>
+
+        <!-- Section to move btwn logs -->
+
+
+    </section>
+
+
+    <!-- Place to link the devlogs to each other -->
+    <!-- <section id="links" class="white">
+      <div>
+        
+      </div>
+    </section> -->
+
+  </body>
+    <div id="contactInfo">
+        <div class="bar4"></div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/han-lin-53a2181aa/" target="_blank" rel="noopener noreferrer">
+                <img src="../images/linkedIn.png" alt="linkedIn">
+            </a>
+            <a href="mailto:han.lin@stonybrook.edu" target="_blank" rel="noopener noreferrer">
+              <img src="../images/mail.png" alt="mail">
+            </a>
+            <a href="https://github.com/hannert" target="_blank" rel="noopener noreferrer">
+              <img src="../images/GitHub-Mark-64px.png" alt="gitHub">
+            </a>
+        </div>
+    </div>
+    <div id="footer"> 
+        <p><br />A rebase of this website into a more modern and extensible framework is in progress.</p>
+        <p>Copyright &copy; Han Lin 2024</p>
+    </div>
+    
+  <link rel="stylesheet" type="text/css" href="../css/log.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inconsolata&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet"> 
+  <script src="js/menu.js"></script>
+  
+  <script src="js/query-3.5.1.js"></script>
+</html>

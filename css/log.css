@@ -1,0 +1,67 @@
+p {
+    font-family: "Space Grotesk"
+}
+
+.white hr{
+    background-color:var(--light-primary-color);
+}
+
+.black hr{
+    background-color:var(--dark-primary-color);
+}
+
+hr {
+    height: 2px;
+    width: 20%;
+}
+
+.ImageComment{
+    padding-left: 24px; 
+    padding-right: 24px;
+}
+
+#backSection{
+    top:2vmax;
+    left:2vmax;
+    position:fixed;
+    mix-blend-mode: difference;
+
+}
+
+#topSection{
+    bottom:2vmax;
+    right:2vmax;
+    position:fixed;
+    mix-blend-mode: difference;
+}
+
+
+.uiButton{
+    width:32px;
+    height:32px;
+}
+
+.uiButton:hover{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+
+
+h3 {
+    font: bold 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+h4 {
+    font: bold;
+    letter-spacing: 2px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.indented {
+    margin-left: 10%;
+}

@@ -28,6 +28,14 @@
   -webkit-font-smoothing: antialiased;
 } 
 
+:root {
+  --dark-background-color: #141313;
+  --dark-primary-color: #fefdf7; 
+  --light-background-color: #fefdf7;
+  --light-primary-color: #141313;
+}
+
+
 
 body {
   background: #000000;
@@ -94,13 +102,13 @@ section {
     color:#000000;
   }
 
-.AboutImageBox{
+.CenteredImageBox{
   display:flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.AboutImage{
+.CenteredImage{
   width: 25vmax;
 }
 .ImageCaption{
@@ -243,6 +251,13 @@ section {
 }
   #skills h3{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  #skills ul li::marker{
+    content: "▸";
+  }
+  #skills li {
+    padding-left: 4px;
   }
 
 #hobbies{ /* Hobby section*/
