@@ -17,6 +17,7 @@ hr {
     width: 20%;
 }
 .CenteredImageBox img{
+    min-width: 30%;
     max-width: 40%;
 }
 .ImageComment{
