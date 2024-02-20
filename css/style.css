@@ -242,21 +242,21 @@ section {
   margin-bottom: 20px;
 }
 
-#skills{ /* work experience section*/
+#logs{ /* work experience section*/
     font-family:"Space Grotesk", 'Courier New', Courier, monospace;
     font-size: x-large;
     padding-top:5%;
     z-index:1;
 
 }
-  #skills h3{
+  #logs h3{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  #skills ul li::marker{
+  #logs ul li::marker{
     content: "▸";
   }
-  #skills li {
+  #logs li {
     padding-left: 4px;
   }
 
