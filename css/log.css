@@ -2,6 +2,10 @@ p {
     font-family: "Space Grotesk"
 }
 
+img{
+    max-width: 40%;
+}
+
 .white hr{
     background-color:var(--light-primary-color);
 }
