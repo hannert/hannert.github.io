@@ -2,9 +2,7 @@ p {
     font-family: "Space Grotesk"
 }
 
-img{
-    max-width: 40%;
-}
+
 
 .white hr{
     background-color:var(--light-primary-color);
@@ -18,7 +16,9 @@ hr {
     height: 2px;
     width: 20%;
 }
-
+.CenteredImageBox img{
+    max-width: 40%;
+}
 .ImageComment{
     padding-left: 24px; 
     padding-right: 24px;
