@@ -70,3 +70,15 @@ h4 {
 .indented {
     margin-left: 10%;
 }
+
+#spider{
+    width: 10%;
+}
+
+#spiderText {
+    visibility: hidden;
+}
+
+#spider:hover #spiderText{
+    visibility: visible;
+}
