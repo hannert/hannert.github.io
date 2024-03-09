@@ -8,9 +8,22 @@ p {
     background-color:var(--light-primary-color);
 }
 
+.white a {
+    background-color:var(--light-primary-color);
+    color:var(--dark-primary-color);
+}
+
+
+
 .black hr{
     background-color:var(--dark-primary-color);
 }
+
+.black a {
+    background-color:var(--dark-primary-color);
+    color:var(--light-primary-color);
+}
+
 
 hr {
     height: 2px;
@@ -20,6 +33,17 @@ hr {
     min-width: 30%;
     max-width: 40%;
 }
+
+.CenteredImageBoxLarge{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.CenteredImageLarge{
+    width: 75vmax;
+  }
+
 .ImageComment{
     padding-left: 24px; 
     padding-right: 24px;
@@ -81,4 +105,15 @@ h4 {
 
 #spider:hover #spiderText{
     visibility: visible;
+}
+
+.linkBox {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.linkButton {
+    font-size: large;
+    font-family: "Work Sans", "Arial Black", Gadget, sans-serif;
+    background-color: aliceblue;
 }

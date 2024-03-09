@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>        
+
+  <title>Han Lin - Devlog 00.5</title>
+
+  <link rel="icon" href="images/favicon.png">
+  <head>
+    <div id="backSection">
+        <a href="../index.html">
+            <img src="../svg/home.svg" class="uiButton">
+        </a>
+    </div>
+    <div id="topSection"> 
+        <a href="#prelude">
+            <img src="../svg/chevron_up.svg" class="uiButton">
+        </a>
+    </div>
+    
+  </head>
+
+  <body>
+
+    <section id="logIntroduction" class="white">
+      <div id="prelude">
+        <h3>00.5 - The Interim - Current Progress Extended</h3>
+          <h2>Prelude</h2>
+          <div> 
+            <div>
+                <p>
+                    Hello all! Welcome to the next of my developer logs. I hope that everyone is doing alright!
+                    I do apologize for the brevity of this installment, my family and I are moving!
+                </p>
+                <p class="indented">
+                    Contents: 
+                    <br> ▸ <a href="#HSM">Hierarchical State Machine for player state management</a>
+                    <br> ▸ <a href="CAMERA">Camera system</a>
+                    <br> ▸ <a href="MOVEMENT">Stairs</a>
+
+                </p>
+
+                <div class="CenteredImageBox">
+                <img src="../images/Log0_5/jumpSmall.gif" class="CenteredImage">  
+                <div class="ImageCaption">
+                    <p>
+                        Hooray!
+                    </p>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class ="black" id="HSM">
+      <div>
+        <h2>Hierarchical State Machine for player state management</h2>
+            <p>
+            To manage the state of my player, I decided to create a hierarchical state machine (HSM). And what is a HSM? 
+            </p>
+            <p class="indented">A state machine that orgranizes states and orders them in order of relevance. </p>
+            <p>
+            I opted to make a HSM because it allows me as a developer to encapsulate certain behaviors to only work in it's respective states. 
+            <br>
+            > For example, if the player is currently falling whilst not inputting any keys, the player would be considered to be airborne and idle. Two states!
+            If i was to make a regular state machine for the player, I would need to create an Airborne Idle state, and when the player lands on the ground, I would need an 
+            Grounded Idle state. With the HSM, I could create seperate states and reuse states that share common behavior. With the HSM implementation, I would create three states: Grounded, Airborne and Idle states.
+            Those states could then depict Grounded Idle and Airborne Idle <b>without having to create a hyper-specific combined state</b>. Although it is more overhead, I feel that it will be beneficial in the longrun.
+
+            </p>
+            <p>
+                <u>Onto my implementation:</u>
+            </p>
+            <p>At the top of the heirarchy, we have <u><b>ROOT</b></u> states: the Ground and Airbone states</p>
+            <p>From there, from either of those states, we can go into an IDLE, WALKING, or SPRINTING.</p>    
+            <p>
+                I have also implemented a crouching state that goes in between the root states and the movement states.
+                 I see the crouching state as an 'Optional' state. For example:
+            </p>
+            <p class="indented"> > We can go down the state machine where the player would be grounded, crouched, and idling (Not moving). </p>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0_5/groundedCrouch.png" class="CenteredImage"> <br/>                
+                <div class="ImageCaption">
+                    <p>
+                        The top left text reveals the current state of the player by going down the root states and connected child states.
+                    </p>
+                </div>
+                <hr>
+            </div>
+            <br>            
+            <div class="CenteredImageBox">
+                <img src="../images/Log0_5/IdleState.gif" class="CenteredImage"> <br/>                
+                <div class="ImageCaption">
+                    <p>
+                        When the player is on the ground idling and the player jumping while providing no other input key.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="white">
+        <h2>Camera System</h2>
+        <p>
+            With my vision, a third person perspective was needed. There was a standout Unity Marketplace package called Cinemachine that handles all of that stuff.
+            But! I wanted to learn how to make one for myself :P. 
+        </p>
+        <h3>Problem</h3>
+        <p>The camera would go <u><b>inside</b></u> of solid objects so theoretically the player could look through solid objects. Normally, in third person games, the camera would "skid" along a hard surface instead.</p>
+        <p>So then, I thought of a simple solution that worked when I only had a flat plane object and the player only:</p>
+        <p class="indented">
+            ▸What I had in place before was just a simple check if the camera was below a certain y-coordinate and to push the camera's y-coordinate up to the surface of the object hitting with hard-coding.
+        </p>
+        <p>Although this did work for a simple test, it is <b>not good</b> since its hard coded and not dynamic!</p>
+        <p></p>
+            <div class="CenteredImageBoxLarge">
+                <img src="../images/Log0_5/previousCamera.png" class="CenteredImageLarge"> <br/>                
+                <div class="ImageCaption">
+                    <p>
+                        I've outlined the object the camera would be in and where the camera <b>was</b> before the fix (blue circle)
+                    </p>
+                    
+                </div>
+                <hr> <br>
+            </div>
+            <p>I drew a 2d representation of what was happening:</p>
+            <div class="CenteredImageBox">
+                <img src="../images/Log0_5/cameraRay.png" class="CenteredImage"> <br/>                
+                <div class="ImageCaption">
+                    <p>
+                        The second row depicts what was happening before where the camera(RED) would go inside the wall. But we can shoot a ray from the player to where the <b>camera is supposed to be(GREEN)</b> and grab the <b>point of contact(YELLOW)</b>, 
+                        then we have our coordinate points of where the camera should be!
+                    </p>
+                </div>
+            </div>
+            <p>By using Unity's Raycast function, we can shoot a ray from the player's location torward where the camera should be in the world if collision was not in the picture.
+                From the raycast, we can get data about the first "hit" from the raycast, in other words: the first point of contact with an object. With that, we have our general position 
+                of where the camera should be! So it would be as easy as setting that information to the actual camera position.
+            </p>
+            <div class="CenteredImageBoxLarge">
+                <img src="../images/Log0_5/fixedCamera.png" class="CenteredImageLarge"> <br/>                
+                <div class="ImageCaption">
+                    <p>
+                        Great! The camera is in the correct position and not going into the wall object!
+                    </p>
+                    
+                </div>
+                <hr> <br>
+            </div>
+    </section>
+
+    <section class="black">
+        <h2>Stairs</h2>
+        <p>Stairs. stairs stairs stairs... </p>
+        <p>With the way the player is currently being moved, a Physics Force is being applied to it in accordance to player input & camera position. 
+            The player could <u>technically</u> go up stairs because the player is a capsule, since it has rounded bottoms. 
+            The physics engine would take care of pushing the player up but it was <b>SLOW</b> and felt like going up the stairs and pulling a cart behind you.
+        </p>
+        <p>Take a look at how it was before!</p>
+        <div class="CenteredImageBoxLarge">
+            <img src="../images/Log0_5/unwanted behavior - raycast intersect.gif" class="CenteredImageLarge"> <br/>                
+            <div class="ImageCaption">
+                <p>
+                    <b>We can't innately walk up stairs! </b>
+                </p>
+            </div>
+            <br>
+            <p>To move up the stairs, an upward force must be exerted on the player to "step" up. For my implementation, a simple Raycast will do the trick! What we need to do is to first 
+                <b>detect</b> and then <b>apply</b> an upward force.
+
+            </p>
+            <div class="ImageCaption">
+                <p>
+                    <b>If you can notice it, theres a <u>red</u> line when we walk forward in the gif above, that's our raycast visualized!</b>
+                </p>
+            </div>
+        </div>
+        <p>
+            This is actually a similar solution to our camera problem! We just need to check if we hit a stair. Now what is a stair? We can define it
+            as two objects that are a certain distance away from eachother (one step). For this, we can use <b>TWO</b> raycasts. The first raycast is used to detect the 
+            player oriented face of the step and the other raycast will be used to detect the <b>next</b> step.
+        </p>
+        <div class="CenteredImageBoxLarge">
+            <img src="../images/Log0_5/Steps raycast.png" class="CenteredImageLarge"> <br/>                
+            <div class="ImageCaption">
+                <p>
+                    The red line would be our first raycast to detect the first step, then the blue line would be for the second step! If both raycats return a hit,
+                    we can apply our upward force!
+                </p>
+            </div>
+            <br>
+
+        </div>
+        <div class="CenteredImageBox">
+            <img src="../images/Log0_5/intended behavior stairstep.gif" class="CenteredImage"> <br/>                
+            <div class="ImageCaption">
+                <p>
+                    Wonderful 🙂. Our steps seem to be working!
+                </p>
+            </div>
+        </div>
+        <br>
+        <h3>Afterword</h3>
+        <p>Thanks for stopping by and reading this all! I hope to see you next time! Here's a picture of whats in the next log!</p>
+        <div class="CenteredImageBox">
+            <img src="../images/Log0_5/peek.png" class="CenteredImage"> <br/>                
+            <div class="ImageCaption">
+                <p>
+                    Have a good one! 👋🕷
+                </p>
+            </div>
+        </div>
+        <!-- Section to move btwn logs -->
+        <div class="linkBox">
+            <a class="linkButton" href="/logs/log0.html">Previous Log</a>    
+
+            <!-- <a class="linkButton">Next Log</a>  -->
+        </div>
+
+    </section>
+
+  </body>
+    <div id="contactInfo">
+        <div class="bar4"></div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/han-lin-53a2181aa/" target="_blank" rel="noopener noreferrer">
+                <img src="../images/linkedIn.png" alt="linkedIn">
+            </a>
+            <a href="mailto:han.lin@stonybrook.edu" target="_blank" rel="noopener noreferrer">
+              <img src="../images/mail.png" alt="mail">
+            </a>
+            <a href="https://github.com/hannert" target="_blank" rel="noopener noreferrer">
+              <img src="../images/GitHub-Mark-64px.png" alt="gitHub">
+            </a>
+        </div>
+    </div>
+    <div id="footer"> 
+        <p><br />A rebase of this website into a more modern and extensible framework is in progress.</p>
+        <p>Copyright &copy; Han Lin 2024</p>
+    </div>
+    
+  <link rel="stylesheet" type="text/css" href="../css/log.css" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inconsolata&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet"> 
+  <script src="js/menu.js"></script>
+  
+  <script src="js/query-3.5.1.js"></script>
+</html>
