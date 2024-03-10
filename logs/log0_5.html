@@ -93,7 +93,25 @@
                         When the player is on the ground idling and the player jumping while providing no other input key.
                     </p>
                 </div>
+                <hr>
             </div>
+            <br>  
+            <div class="CenteredImageBox">
+                <img src="../images/Log0_5/testDrive.gif" class="CenteredImage"> <br/>                
+                <div class="ImageCaption">
+                    <p>
+                        Heres a look at how it'd look from normal player movement!
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                From each state interally, we can take input/external factors and use that to determine if we need to switch states.
+                If we do need to switch states, we have an exit function associated with it alongside things to clean up the state's data. We also have 
+                to enter the new state and that would have some further logic. For example, if we enter the airborne state, we can set the players gravity higher or lower!
+                It's best to think of the state management as a linked list starting from the root state and it's associated child states. Then, for each
+                Unity update cycle, each state's logic is performed.
+            </p>
         </div>
         
     </section>
