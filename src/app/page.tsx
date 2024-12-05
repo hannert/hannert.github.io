@@ -4,10 +4,12 @@ import Image from "next/image";
 import Nameplate from "./components/name-plate";
 import Refresh from "./components/refresh-page";
 
+import Cube from "./components/cube";
 import Extender from "./components/debug-extender";
 import LargeContainer from "./components/large-container";
 import ProjectCard from "./components/project-card";
-import Cube from "./components/cube";
+import ProjectContainer from "./components/project-container";
+
 
 export default function Home() {
   return (
@@ -39,6 +41,7 @@ export default function Home() {
         <ProjectCard>
           
         </ProjectCard>
+        <ProjectContainer></ProjectContainer>
         <Cube></Cube>
 
         <Extender/>
