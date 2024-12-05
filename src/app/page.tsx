@@ -1,14 +1,27 @@
 'use client'
 import { motion } from "motion/react";
 import Image from "next/image";
-import Testcomponent from "./components/testcomponent";
+import Nameplate from "./components/name-plate";
+import Refresh from "./components/refresh-page";
+
+import Extender from "./components/debug-extender";
+import LargeContainer from "./components/large-container";
+import ProjectCard from "./components/project-card";
+import Cube from "./components/cube";
 
 export default function Home() {
   return (
-    <motion.div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <Testcomponent/>
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <motion.div className="grid items-center justify-items-center min-h-screen p-4 pb-12 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <Nameplate/>
+      <main className="flex flex-col  gap-8 row-start-2 items-center sm:items-start">
+      <Image
 
+            src="/images/bust.png"
+            alt="Bust picture"
+            width={400}
+            height={30}
+            priority
+          />          
         <motion.div
           initial={{scale:0}}
           animate={{scale:1}}
@@ -23,8 +36,16 @@ export default function Home() {
           />          
         </motion.div>
 
+        <ProjectCard>
+          
+        </ProjectCard>
+        <Cube></Cube>
+
+        <Extender/>
+        <LargeContainer></LargeContainer>
+
         <motion.div
-          className="width=400 height=300 color=[red]">
+          className="width=100 height=300 color=[red]">
           Awesome
         </motion.div>
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
@@ -73,9 +94,10 @@ export default function Home() {
 
 
       </motion.div>
-
+      <Extender></Extender>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        <Refresh></Refresh>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
