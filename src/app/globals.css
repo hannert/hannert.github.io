@@ -3,20 +3,30 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #;
+  --background: #F1E8B8;
+  --foreground: #191919;
+  --accent: #F9E784;
+  --secondary: #E58F65;
+  --tertiary: #D05353;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #191919;
+    --foreground: #f0ece3;
+    --primary: #F1E8B8;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  background:linear-gradient(#191919, #1a1a1a),
+  url('/noise.svg');
 }
