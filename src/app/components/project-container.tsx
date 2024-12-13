@@ -75,10 +75,9 @@ export default function ProjectContainer () {
       <div className="flex justify-center gap-3 bg-#F1E8B8" >
       {
         test.map((num) => (
-          <button onClick={() => set_curr_card(num)}>
+          <button onClick={() => set_curr_card(num)} key={num}>
           <motion.svg 
             className="w-5 h-5 group" 
-            key={num}
             initial={{"scale": 0}}
             animate={{"scale": 1}}
             viewport={{once: true}}
@@ -89,6 +88,7 @@ export default function ProjectContainer () {
               custom={num}
               initial=""
               animate={{fill: num === curr_card ? "#D05353" : "#F9E784"}}
+              transition={{duration: 0.07, type: "spring"}}
             ></motion.circle>
           </motion.svg>
           </button>

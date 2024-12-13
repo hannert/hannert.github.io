@@ -6,10 +6,9 @@ import Refresh from "./components/refresh-page";
 
 import Cube from "./components/cube";
 import Extender from "./components/debug-extender";
-import LargeContainer from "./components/large-container";
-import ProjectCard from "./components/project-card";
+import Navigator from "./components/nav/navigator";
 import ProjectContainer from "./components/project-container";
-import DarkMode from "./components/dark-mode";
+import TitleCard from "./components/title-card";
 
 
 export default function Home() {
@@ -31,8 +30,8 @@ export default function Home() {
         >
   
         </motion.div>
-
-
+        <a id="Projects"/>
+        <TitleCard frontText="P" firstColor="text-emerald-500" bodyText="rojects"/>
         <ProjectContainer></ProjectContainer>
         <Cube></Cube>
 
@@ -90,7 +89,7 @@ export default function Home() {
       <Extender></Extender>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <DarkMode />
+        <Navigator />
         <Refresh></Refresh>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
