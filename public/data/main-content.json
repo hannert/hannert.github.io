@@ -1,0 +1,17 @@
+{
+  "Projects" : {
+    "MapperMan" : {
+      "title": "MapperMan",
+      "subTitle": "MERN Stack map editing application",
+      "briefDescription": "A MERN stack web application aimed at provided a map editing service online. Geared towards GeoJSON files as well as SHP/DBF files, MapperMan allows users to import, edit, and share their maps with others using MapperMan.",
+      "link": "https://mapperman.netlify.app"
+    
+    },
+
+    "UnityController" : {
+      "title": "Unity Character Controller",
+      "subTitle": "A HSM character controller for Unity 3D",
+      "briefDescription": "A project of mine written in C# and ran on the Unity game engine. Trying out a Hierarchical State Machine approach to implement an extensible character controller. Employing programming patterns such as state machines and observer patterns to create a working character movement system. "
+    }
+  }
+}

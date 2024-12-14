@@ -9,12 +9,20 @@ import FullscreenSVG from "./svgs/fullscreen-svg";
  * @returns 
  */
 export default function ProjectCard (props: any) {
+
+  const container = {
+
+  }
+
+
+
+
   return (
     <section 
       className="flex 
         flex-col
         min-w-96
-        max-h-1/2
+        max-h-[36rem]
         sm:w-[30rem]
         md:w-[42rem]
         bg-[#202020]
@@ -28,8 +36,19 @@ export default function ProjectCard (props: any) {
       <div className="flex flex-col justify-center gap-4 w-full rounded-3xl p-4">
 
         <div className="flex flex-col">
-          <p className="text-5xl font-extrabold under">Title</p>
-          <p className="text-xs font-[family-name:var(--font-geist-mono)]">Lesser-Title</p>
+          <div className="w-full flex">
+            <p className="float-left text-5xl font-extrabold flex-grow">
+              {props.title ? props.title : "Title"}
+            </p> 
+            <div className="">
+              {props.children}
+            </div>
+            
+          </div>
+          
+          <p className="text-xs font-[family-name:var(--font-geist-mono)]">
+            {props.subTitle ? props.subTitle : "sub-title"}
+          </p>
         
         </div>
         <Divider />
@@ -42,8 +61,8 @@ export default function ProjectCard (props: any) {
             priority
           />
           <br></br>
-          <p className="font-[family-name:var(--Segoe UI)]">
-            {props.children}
+          <p className="font-[family-name:var(--Segoe UI)] overflow-y-auto">
+            {props.briefDescription ? props.briefDescription : "A brief description should be here! =)"}
           </p><br/>
 
         </div>

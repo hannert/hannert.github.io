@@ -27,6 +27,6 @@ body {
 
 body {
   background-color: var(--background);
-  background:linear-gradient(#191919, #1a1a1a),
+  background:radial-gradient(circle at center, #222222, #191919),
   url('/noise.svg');
 }

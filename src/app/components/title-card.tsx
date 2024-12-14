@@ -48,7 +48,7 @@ export default function TitleCard (props: any) {
   return (
     <AnimatePresence>
       <motion.div
-        className="flex text-7xl font-extrabold underline"
+        className="w-full flex text-7xl md:text-9xl font-extrabold underline justify-center items-center"
         variants="container"
         initial="inactive"
         animate="active"

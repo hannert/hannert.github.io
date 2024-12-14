@@ -1,8 +1,12 @@
 import { motion, useAnimate, Variants } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectCard from "./project-card";
+import Map from "./svgs/map";
 
 export default function ProjectContainer () {
+  // Data to populate the cards with
+  const data = require("/public/data/main-content.json")
+  const projectData : any[] = Object.values(data.Projects)
 
   // Index of the card we are on = Which one is currently focused
   const[curr_card, set_curr_card] = useState(0)
@@ -10,8 +14,15 @@ export default function ProjectContainer () {
 
   const[scope, animate] = useAnimate()
 
-  const test = [0,1,2,3,4]
-  const MAX: number = test.length
+  const MAX: number = projectData.length
+  let projectRange: [number] = [0]
+
+  for (let i = 1; i < MAX; i++){
+    projectRange.push(i);
+  }
+
+
+
   const LIMIT: number = 3
 
   // Should take in a variable amount of children based on how many project cards there are
@@ -56,25 +67,26 @@ export default function ProjectContainer () {
 
   }
 
-  const chooseState = (num: number) => {
-    console.log("Choosing state ", num , " ", curr_card)
-    if (num === curr_card) return "focus"
-    if ((num - 1) % MAX === curr_card) return "right"
-    if ((num + 1) % MAX === curr_card) return "left"
-    return "offscreen"
-  }
-
-
   return (
     <div className="flex flex-col justify-items-center max-w-[32rem] ">
 
       <div className="grid grid-rows-1 self-center">
-        <ProjectCard></ProjectCard>
+
+        {
+          <ProjectCard
+          title={projectData[curr_card].title}
+          subTitle={projectData.subTitle}
+          briefDescription={projectData.briefDescription}
+          >
+
+          </ProjectCard>
+        }
+
       </div>  
       <br/>
       <div className="flex justify-center gap-3 bg-#F1E8B8" >
       {
-        test.map((num) => (
+        projectRange.map((num) => (
           <button onClick={() => set_curr_card(num)} key={num}>
           <motion.svg 
             className="w-5 h-5 group" 
@@ -94,6 +106,7 @@ export default function ProjectContainer () {
           </button>
         ))
       }
+
       </div>
       <br/>
       <div className="flex justify-center gap-8">
