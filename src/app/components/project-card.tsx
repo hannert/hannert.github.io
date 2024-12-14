@@ -3,8 +3,12 @@ import Divider from "./divider";
 import ExitSVG from "./svgs/exit-site";
 import FullscreenSVG from "./svgs/fullscreen-svg";
 
-
-export default function ProjectCard () {
+/**
+ * 
+ * @param props title, subTitle, briefDescription
+ * @returns 
+ */
+export default function ProjectCard (props: any) {
   return (
     <section 
       className="flex 
@@ -39,11 +43,7 @@ export default function ProjectCard () {
           />
           <br></br>
           <p className="font-[family-name:var(--Segoe UI)]">
-          Brief Description ------------------------------------
-          ------------------------------------------------------
-          ------------------------------------------------------
-          ------------------------------------------------------
-          ------------------------------------------------------
+            {props.children}
           </p><br/>
 
         </div>
