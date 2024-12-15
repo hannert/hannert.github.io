@@ -75,8 +75,8 @@ export default function ProjectContainer () {
         {
           <ProjectCard
           title={projectData[curr_card].title}
-          subTitle={projectData.subTitle}
-          briefDescription={projectData.briefDescription}
+          subTitle={projectData[curr_card].subTitle}
+          briefDescription={projectData[curr_card].briefDescription}
           >
 
           </ProjectCard>

@@ -22,7 +22,7 @@ export default function ProjectCard (props: any) {
       className="flex 
         flex-col
         min-w-96
-        max-h-[36rem]
+        h-[48rem]
         sm:w-[30rem]
         md:w-[42rem]
         bg-[#202020]
@@ -35,8 +35,8 @@ export default function ProjectCard (props: any) {
       >
       <div className="flex flex-col justify-center gap-4 w-full rounded-3xl p-4">
 
-        <div className="flex flex-col">
-          <div className="w-full flex">
+        <div className="flex flex-col h-24">
+          <div className="flex w-full">
             <p className="float-left text-5xl font-extrabold flex-grow">
               {props.title ? props.title : "Title"}
             </p> 
@@ -60,15 +60,18 @@ export default function ProjectCard (props: any) {
             height={30}
             priority
           />
-          <br></br>
-          <p className="font-[family-name:var(--Segoe UI)] overflow-y-auto">
+          <br/>
+          <p className="font-[family-name:var(--Segoe UI)] max-h-52 overflow-y-auto">
+            
             {props.briefDescription ? props.briefDescription : "A brief description should be here! =)"}
+            <p className="sticky bottom-0 backdrop-blur-sm [-webkit-mask:linear-gradient(transparent,black_70%)] w-full h-6"></p>
+            
           </p><br/>
 
         </div>
 
       </div>
-      <div>
+      <div className="">
         <button className="group w-24 h-12 float-left bg-yellow-200 rounded-r-md flex justify-center items-center" title="Expand">
           <FullscreenSVG />
         </button>
@@ -76,7 +79,6 @@ export default function ProjectCard (props: any) {
           <ExitSVG />
         </button>
       </div>
-      <br/>
 
       
     </section>
