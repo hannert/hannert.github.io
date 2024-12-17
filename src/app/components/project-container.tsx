@@ -76,7 +76,9 @@ export default function ProjectContainer () {
           title={projectData[curr_card].title}
           subTitle={projectData[curr_card].subTitle}
           imagePath={projectData[curr_card].imagePath}
+          imageTag={projectData[curr_card].imageTag}
           briefDescription={projectData[curr_card].briefDescription}
+          expanded={projectData[curr_card].expanded}
           gotoLink={projectData[curr_card].link}
           >
 
@@ -88,16 +90,16 @@ export default function ProjectContainer () {
       {
         projectRange.map((num) => (
           <button 
-            className="flex items-center justify-center"
+          className="flex items-center justify-center"
             onClick={() => set_curr_card(num)} key={num}>
           <motion.svg 
-            className="w-5 h-5 group" 
+            className="w-5 h-5 group flex items-center justify-center" 
             initial={{"scale": 0}}
             animate={{"scale": 1}}
             viewport={{once: true}}
 
           >
-            <motion.circle cx="8" cy="8" r="8"
+            <motion.circle cx="10" cy="10" r="10"
               className="group-hover:fill-green-600 transition-colors"
               custom={num}
               initial=""

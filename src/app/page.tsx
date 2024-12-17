@@ -9,6 +9,8 @@ import Extender from "./components/debug-extender";
 import Navigator from "./components/nav/navigator";
 import ProjectContainer from "./components/project-container";
 import TitleCard from "./components/title-card";
+import Github from "./components/svgs/github";
+import LinkedIn from "./components/svgs/linkedin";
 
 
 export default function Home() {
@@ -25,10 +27,11 @@ export default function Home() {
             priority
           />          
         <motion.div
+        className="max-w-96"
           initial={{scale:0}}
           animate={{scale:1}}
         >
-  
+          Welcome to my website! I am a developer with a Bachelors Degree in Computer Science from Stony Brook University. I am interested in video game design and development. I’m currently learning more about the Unity game engine and creating my own game.  In my free time, I like to listen to music, exercise and play video games. Feel free to browse my projects listed below or on my GitHub! 
         </motion.div>
         <a id="Projects"/>
         <TitleCard frontText="P" firstColor="text-emerald-500" bodyText="rojects"/>
@@ -86,41 +89,28 @@ export default function Home() {
 
 
       </motion.div>
-      <Extender></Extender>
+      {/* <Extender></Extender> */}
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <Navigator />
         <Refresh></Refresh>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/icons8-linkedin.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-            color="white"
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://www.linkedin.com/in/hanqlin/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <LinkedIn/>
+          LinkedIn
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://github.com/hannert"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github/>
+          GitHub
         </a>
 
       </footer>
