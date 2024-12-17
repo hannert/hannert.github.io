@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Image from "next/image";
 import Divider from "./divider";
 import ExitSVG from "./svgs/exit-site";
@@ -18,7 +19,7 @@ export default function ProjectCard (props: any) {
 
 
   return (
-    <section 
+    <motion.div 
       className="flex 
         flex-col
         min-w-96
@@ -32,6 +33,9 @@ export default function ProjectCard (props: any) {
          rounded-lg
          overflow-hidden
         "
+        initial={{x: 100, opacity: 0}}
+        animate={{ x: 0, opacity: 1}}
+        exit={{}}
       >
       <div className="flex flex-col justify-center gap-4 w-full rounded-3xl p-4">
 
@@ -52,14 +56,16 @@ export default function ProjectCard (props: any) {
         
         </div>
         <Divider />
-        <div className="p-4">         
-          <Image
-            src="/gifs/MapperMan.gif"
-            alt="MM Demo gif"
-            width={400}
-            height={30}
-            priority
-          />
+        <div className="p-4">
+          {props.imagePath &&
+            <Image
+              src={props.imagePath}
+              alt="MM Demo gif"
+              width={400}
+              height={30}
+              priority
+            />
+          }
           <br/>
           <p className="font-[family-name:var(--Segoe UI)] max-h-52 overflow-y-auto">
             
@@ -72,15 +78,17 @@ export default function ProjectCard (props: any) {
 
       </div>
       <div className="">
+        { props.expanded && 
         <button className="group w-24 h-12 float-left bg-yellow-200 rounded-r-md flex justify-center items-center" title="Expand">
           <FullscreenSVG />
         </button>
+        }
         <button className="group w-24 h-12 float-right bg-pink-400 rounded-l-md flex justify-center items-center" title="Go">
           <ExitSVG />
         </button>
       </div>
 
       
-    </section>
+    </motion.div>
   );
 }

@@ -1,7 +1,6 @@
-import { motion, useAnimate, Variants } from "motion/react";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useAnimate, usePresence, Variants } from "motion/react";
+import { useState } from "react";
 import ProjectCard from "./project-card";
-import Map from "./svgs/map";
 
 export default function ProjectContainer () {
   // Data to populate the cards with
@@ -10,7 +9,7 @@ export default function ProjectContainer () {
 
   // Index of the card we are on = Which one is currently focused
   const[curr_card, set_curr_card] = useState(0)
-
+  const [isPresent, safeToRemove] = usePresence()
 
   const[scope, animate] = useAnimate()
 
@@ -71,23 +70,26 @@ export default function ProjectContainer () {
     <div className="flex flex-col justify-items-center max-w-[32rem] ">
 
       <div className="grid grid-rows-1 self-center">
-
-        {
+        <AnimatePresence>
           <ProjectCard
+          key={projectData[curr_card].title}
           title={projectData[curr_card].title}
           subTitle={projectData[curr_card].subTitle}
+          imagePath={projectData[curr_card].imagePath}
           briefDescription={projectData[curr_card].briefDescription}
+          gotoLink={projectData[curr_card].link}
           >
 
           </ProjectCard>
-        }
-
+        </AnimatePresence>
       </div>  
       <br/>
       <div className="flex justify-center gap-3 bg-#F1E8B8" >
       {
         projectRange.map((num) => (
-          <button onClick={() => set_curr_card(num)} key={num}>
+          <button 
+            className="flex items-center justify-center"
+            onClick={() => set_curr_card(num)} key={num}>
           <motion.svg 
             className="w-5 h-5 group" 
             initial={{"scale": 0}}
