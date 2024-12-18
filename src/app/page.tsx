@@ -11,74 +11,41 @@ import ProjectContainer from "./components/project-container";
 import TitleCard from "./components/title-card";
 import Github from "./components/svgs/github";
 import LinkedIn from "./components/svgs/linkedin";
+import Mail from "./components/svgs/mail";
 
 
 export default function Home() {
   return (
     <motion.div className="grid items-center justify-items-center min-h-screen p-4 pb-12 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <Nameplate/>
-      <main className="flex flex-col  gap-8 row-start-2 items-center sm:items-start">
-      <Image
-
-            src="/images/bust.png"
-            alt="Bust picture"
-            width={400}
-            height={30}
-            priority
-          />          
-        <motion.div
-        className="max-w-96"
-          initial={{scale:0}}
-          animate={{scale:1}}
+      <main className="flex flex-col justify-center gap-8 row-start-2 items-center">
+        <div
+          className="flex flex-col sm:flex-row items-center p-4 gap-8"
         >
-          Welcome to my website! I am a developer with a Bachelors Degree in Computer Science from Stony Brook University. I am interested in video game design and development. I’m currently learning more about the Unity game engine and creating my own game.  In my free time, I like to listen to music, exercise and play video games. Feel free to browse my projects listed below or on my GitHub! 
-        </motion.div>
+          <div>
+            <Image
+              src="/images/bust.png"
+              alt="Bust picture"
+              width={400}
+              height={30}
+              priority
+            />
+            <p className="w-full text-sm font-extralight">That's me!</p>
+          </div>
+                  
+          <motion.div
+          className="max-w-96"
+            initial={{scale:0}}
+            animate={{scale:1}}
+          >
+            <p>Welcome to my website! I am a developer with a Bachelors Degree in Computer Science from Stony Brook University. I am interested in video game design and development. I’m currently learning more about the Unity game engine and creating my own game.  In my free time, I like to listen to music, exercise and play video games. Feel free to browse my projects listed below or on my GitHub! </p>
+            
+          </motion.div>
+        </div>
         <a id="Projects"/>
         <TitleCard frontText="P" firstColor="text-emerald-500" bodyText="rojects"/>
         <ProjectContainer></ProjectContainer>
         <Cube></Cube>
-
-
-        <motion.div
-          className="width=100 height=300 color=[red]">
-          Awesome
-        </motion.div>
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="mailto:lhan8819@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Here!
-          </a>
-        </div>
 
 
       <motion.div
@@ -93,7 +60,15 @@ export default function Home() {
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <Navigator />
-        <Refresh></Refresh>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="mailto:lhan8819@gmail.com"
+          target="_blank"
+          rel="nofollow noopener"
+        >
+          <Mail/>
+          Mail
+        </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://www.linkedin.com/in/hanqlin/"
