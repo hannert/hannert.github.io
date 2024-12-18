@@ -22,7 +22,7 @@ export default function Home() {
         >
           <div>
             <Image
-              src="/images/bust.png"
+              src={"/images/bust.png"}
               alt="Bust picture"
               width={400}
               height={30}
