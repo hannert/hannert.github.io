@@ -10,7 +10,7 @@ import Github from "./components/svgs/github";
 import LinkedIn from "./components/svgs/linkedin";
 import Mail from "./components/svgs/mail";
 import TitleCard from "./components/title-card";
-import bustURL from "/images/bust.png";
+import bustURL from "/images/Bust.png";
 
 export default function Home() {
   return (
