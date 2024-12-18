@@ -2,16 +2,14 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Nameplate from "./components/name-plate";
-import Refresh from "./components/refresh-page";
 
 import Cube from "./components/cube";
-import Extender from "./components/debug-extender";
 import Navigator from "./components/nav/navigator";
 import ProjectContainer from "./components/project-container";
-import TitleCard from "./components/title-card";
 import Github from "./components/svgs/github";
 import LinkedIn from "./components/svgs/linkedin";
 import Mail from "./components/svgs/mail";
+import TitleCard from "./components/title-card";
 
 
 export default function Home() {
@@ -31,7 +29,7 @@ export default function Home() {
               priority
             />
             <p className="w-full text-sm font-extralight">{`That's me!`}</p>
-          </div
+          </div>
                   
           <motion.div
           className="max-w-96"
