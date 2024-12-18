@@ -10,7 +10,7 @@ import Github from "./components/svgs/github";
 import LinkedIn from "./components/svgs/linkedin";
 import Mail from "./components/svgs/mail";
 import TitleCard from "./components/title-card";
-
+import bustURL from "/images/bust.png";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
         >
           <div>
             <Image
-              src={"/images/bust.png"}
+              src={bustURL}
               alt="Bust picture"
               width={400}
               height={30}
