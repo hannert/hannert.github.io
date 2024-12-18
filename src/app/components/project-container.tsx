@@ -9,9 +9,6 @@ export default function ProjectContainer () {
 
   // Index of the card we are on = Which one is currently focused
   const[curr_card, set_curr_card] = useState(0)
-  const [isPresent, safeToRemove] = usePresence()
-
-  const[scope, animate] = useAnimate()
 
   const MAX: number = projectData.length
   let projectRange: [number] = [0]
@@ -20,9 +17,6 @@ export default function ProjectContainer () {
     projectRange.push(i);
   }
 
-
-
-  const LIMIT: number = 3
 
   // Should take in a variable amount of children based on how many project cards there are
   const onNextClick = () => {
@@ -34,36 +28,6 @@ export default function ProjectContainer () {
     // Freaky modulo 'bug'
     set_curr_card((((curr_card - 1) % MAX) + MAX) % MAX)
     return null
-  }
-
-  const variants: Variants = {
-    offscreen: {
-      visibility: "hidden",
-
-
-    },
-    focus: {
-      scale: 0.6,
-      visibility: "visible",
-      x: 0,
-      zIndex: 2,
-      rotate: 0
-    },
-    left: {
-      scale: 0.7,
-      visibility: "visible",
-
-      x: -50, 
-      zIndex: -1,
-
-    },
-    right: {
-      scale: 0.7,
-      visibility: "visible",
-      zIndex: -2,
-      x: 50
-    }
-
   }
 
   return (

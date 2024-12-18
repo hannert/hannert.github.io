@@ -30,8 +30,8 @@ export default function Home() {
               height={30}
               priority
             />
-            <p className="w-full text-sm font-extralight">That's me!</p>
-          </div>
+            <p className="w-full text-sm font-extralight">{`That's me!`}</p>
+          </div
                   
           <motion.div
           className="max-w-96"
