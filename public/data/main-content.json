@@ -6,7 +6,7 @@
       "imagePath": "/gifs/MapperMan.gif",
       "imageTag": "MapperMan GIF",
       "briefDescription": "A MERN stack web application aimed at provided a map editing service online. Geared towards GeoJSON files as well as SHP/DBF files, MapperMan allows users to import, edit, and share their maps with others using MapperMan.",
-      "expanded": "true", 
+      "expanded": "false", 
       "link": "https://mapperman.netlify.app"
     
     },
@@ -16,7 +16,9 @@
       "subTitle": "A HSM character controller for Unity 3D",
       "imagePath": "/gifs/CharacterController.gif",
       "imageTag": "Controller GIF",
-      "briefDescription": "A project written in C# and ran on the Unity game engine. Trying out a Hierarchical State Machine approach to implement an extensible character controller. Employing programming patterns such as state machines and observer patterns to create a working character movement system."
+      "briefDescription": "A project written in C# and ran on the Unity game engine. Trying out a Hierarchical State Machine approach to implement an extensible character controller. Employing programming patterns such as state machines and observer patterns to create a working character movement system.",
+      "expanded": "false",
+      "link": "https://github.com/hannert/Dynamic-Controller"
     }
   }
 }

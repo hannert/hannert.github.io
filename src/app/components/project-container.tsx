@@ -1,4 +1,4 @@
-import { AnimatePresence, motion, useAnimate, usePresence, Variants } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import ProjectCard from "./project-card";
 
@@ -43,7 +43,7 @@ export default function ProjectContainer () {
           imageTag={projectData[curr_card].imageTag}
           briefDescription={projectData[curr_card].briefDescription}
           expanded={projectData[curr_card].expanded}
-          gotoLink={projectData[curr_card].link}
+          link={projectData[curr_card].link}
           >
 
           </ProjectCard>

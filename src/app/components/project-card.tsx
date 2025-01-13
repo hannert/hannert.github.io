@@ -81,14 +81,18 @@ export default function ProjectCard (props: any) {
       </div>
 
       <div title="Buttons" className="row-start-9">
-        { props.expanded && 
+        { props.expanded === true && 
         <button className="group w-24 h-12 float-left bg-yellow-200 rounded-r-md flex justify-center items-center" title="Expand">
           <FullscreenSVG />
         </button>
         }
+        { props.link !== null && 
+        <a href={props.link} target="_blank">
         <button className="group w-24 h-12 float-right bg-pink-400 rounded-l-md flex justify-center items-center" title="Go">
           <ExitSVG />
         </button>
+        </a>
+        }
       </div>
 
       
