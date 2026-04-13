@@ -55,7 +55,7 @@ export default function HomeLab(props: any) {
           className="row-span-3 flex items-center justify-center relative overflow-hidden h-full"
         >
           <Image
-            src="/images/Thinkcentre1200.jpg"
+            src="/images/ThinkCentre1200.jpg"
             alt="Thinkcentre"
             layout="fill"
             objectFit="contain"

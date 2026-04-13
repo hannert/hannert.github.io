@@ -30,7 +30,7 @@ export default function Home() {
         </ul>
         <div className="flex flex-col items-center">
           <Image
-            src="/images/Thinkcentre1200.jpg"
+            src="/images/ThinkCentre1200.jpg"
             alt="Thinkcentre"
             width={400}
             height={30}
