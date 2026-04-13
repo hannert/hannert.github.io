@@ -32,7 +32,7 @@ export default function Nameplate() {
           Han Qiang Lin
       </p>
       <p className="font-extralight font-[family-name:var(--font-geist-mono)]">
-        Developer
+        IT Professional | Developer
       </p>
       
     </motion.div>

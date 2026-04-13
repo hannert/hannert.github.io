@@ -22,10 +22,9 @@ export default function ProjectCard (props: any) {
   return (
     <motion.div 
       className="grid 
-        grid-rows-9
+        grid-rows-4
         gap-4
         min-w-96
-        h-[48rem]
         sm:w-[30rem]
         md:w-[42rem]
         bg-[#202020]

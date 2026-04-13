@@ -1,0 +1,13 @@
+{
+  "Projects" : {
+    "Card Game POC" : {
+      "title": "Card Game in Godot",
+      "subTitle": "A HSM character controller for Unity 3D",
+      "imagePath": "/gifs/CharacterController.gif",
+      "imageTag": "Controller GIF",
+      "briefDescription": "A project written in C# and ran on the Unity game engine. Trying out a Hierarchical State Machine approach to implement an extensible character controller. Employing programming patterns such as state machines and observer patterns to create a working character movement system.",
+      "expanded": "false",
+      "link": "https://github.com/hannert/Dynamic-Controller"
+    }
+  }
+}

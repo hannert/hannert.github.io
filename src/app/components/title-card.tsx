@@ -1,49 +1,41 @@
 import { AnimatePresence, motion, useInView } from "motion/react";
 import { useRef } from "react";
 
-export default function TitleCard (props: any) {
-
+export default function TitleCard(props: any) {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   const container = {
     inactive: {
-      y: -8
-    }, 
+      y: -8,
+    },
     active: {
       transition: {
         staggerChildren: 0.05,
-        staggerDirection: -1
-      }
-
+        staggerDirection: -1,
+      },
     },
     exit: {
       transition: {
         staggerChildren: 0.05,
-
-      }
-    }
+      },
+    },
   };
 
   const item = {
-    inactive: { 
+    inactive: {
       opacity: 0,
       y: -40,
-
-
     },
-    active: { 
+    active: {
       opacity: 1,
       y: 0,
-
     },
     exit: {
       opacity: 0,
-      y: -10
-    }
+      y: -10,
+    },
   };
-
-
 
   return (
     <AnimatePresence>
@@ -52,22 +44,15 @@ export default function TitleCard (props: any) {
         variants="container"
         initial="inactive"
         animate="active"
-        viewport={{once: true}}        
+        viewport={{ once: true }}
       >
-        <motion.p
-        className={props.firstColor}
-        variants={item}
-        >
+        <motion.p className={props.firstColor} variants={item}>
           {props.frontText}
         </motion.p>
-        <motion.p
-        className={props.bodyColor}
-        variants={item}
-        >
+        <motion.p className={props.bodyColor} variants={item}>
           {props.bodyText}
         </motion.p>
-        
       </motion.div>
     </AnimatePresence>
-  )
+  );
 }
