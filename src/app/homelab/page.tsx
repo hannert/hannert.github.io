@@ -1,10 +1,10 @@
 "use client";
-import Cube from "@/app/components/cube";
-import Github from "@/app/components/svgs/github";
-import LinkedIn from "@/app/components/svgs/linkedin";
-import Mail from "@/app/components/svgs/mail";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Cube from "../components/cube";
+import Github from "../components/svgs/github";
+import LinkedIn from "../components/svgs/linkedin";
+import Mail from "../components/svgs/mail";
 import PersonMove from "../components/svgs/person-move";
 
 export default function Home() {

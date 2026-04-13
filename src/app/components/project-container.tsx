@@ -1,16 +1,16 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import data from "../../../public/data/main-content.json";
 import ProjectCard from "./project-card";
 import TitleCard from "./title-card";
 
 interface SectionProps {
-  path: string;
   title: string;
 }
 
-export default function ProjectContainer({ path, title }: SectionProps) {
+export default function ProjectContainer({ title }: SectionProps) {
   // Data to populate the cards with
-  const data = require(`/public/data/${path}`);
+  // const data = require(`/public/data/main-content`);
   const projectData: any[] = Object.values(data.Projects);
 
   // Index of the card we are on = Which one is currently focused
@@ -36,7 +36,7 @@ export default function ProjectContainer({ path, title }: SectionProps) {
   };
 
   const firstLetter = title.charAt(0);
-  const remainingLetters = title.slice(1)
+  const remainingLetters = title.slice(1);
 
   return (
     <>

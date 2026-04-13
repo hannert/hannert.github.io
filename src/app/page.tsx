@@ -4,14 +4,13 @@ import Image from "next/image";
 import Nameplate from "./components/name-plate";
 
 import Cube from "./components/cube";
+import Divider from "./components/divider";
+import HomeLab from "./components/homelab";
 import Navigator from "./components/nav/navigator";
 import ProjectContainer from "./components/project-container";
 import Github from "./components/svgs/github";
 import LinkedIn from "./components/svgs/linkedin";
 import Mail from "./components/svgs/mail";
-import TitleCard from "./components/title-card";
-import Divider from "./components/divider";
-import HomeLab from "./components/homelab";
 
 export default function Home() {
   return (
@@ -49,10 +48,7 @@ export default function Home() {
         <HomeLab />
         <Divider />
         <a id="Projects" />
-        <ProjectContainer
-          path={"main-content"}
-          title={"Projects"}
-        ></ProjectContainer>
+        <ProjectContainer title={"Projects"}></ProjectContainer>
         <Cube></Cube>
 
         <motion.div style={{}}></motion.div>
