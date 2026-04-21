@@ -6,9 +6,10 @@ import TitleCard from "./title-card";
 
 interface SectionProps {
   title: string;
+  color: string
 }
 
-export default function ProjectContainer({ title }: SectionProps) {
+export default function ProjectContainer({ title, color }: SectionProps) {
   // Data to populate the cards with
   // const data = require(`/public/data/main-content`);
   const projectData: any[] = Object.values(data.Projects);
@@ -42,7 +43,7 @@ export default function ProjectContainer({ title }: SectionProps) {
     <>
       <TitleCard
         frontText={firstLetter}
-        firstColor="text-emerald-500"
+        firstColor={color}
         bodyText={remainingLetters}
       />
       <div className="flex flex-col justify-items-center max-w-[32rem] ">

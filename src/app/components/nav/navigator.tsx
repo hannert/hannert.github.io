@@ -68,23 +68,28 @@ export default function Navigator () {
             variants={item}>
             <ChevronDoubleUp />
           </motion.button>
-          <motion.a className="w-12 h-12 flex justify-center items-center border border-solid border-black/[.08] dark:border-white/[.145] text-emerald-500 font-extrabold text-3xl"
+          <motion.a className="w-12 h-12 flex justify-center items-center border border-solid border-black/[.08] dark:border-white/[.145] text-yellow-500 font-extrabold text-3xl"
+            title="Homelab" 
+            variants={item}
+            href="#Homelab"
+          >
+            H
+          </motion.a>
+          <motion.a className="w-12 h-12 flex justify-center items-center border border-solid border-black/[.08] dark:border-white/[.145] text-green-500 font-extrabold text-3xl"
             title="Projects" 
             variants={item}
             href="#Projects"
           >
             P
           </motion.a>
-          {/* <motion.a className="w-12 h-12 flex justify-center items-center border border-solid border-black/[.08] dark:border-white/[.145] z-10 font-extrabold text-3xl"
-            title="Logs"
-            variants={item}>
-            L
+          <motion.a className="w-12 h-12 flex justify-center items-center border border-solid border-black/[.08] dark:border-white/[.145] text-blue-500 font-extrabold text-3xl"
+            title="Hobbies" 
+            variants={item}
+            href="#Hobbies"
+          >
+            H
           </motion.a>
-          <motion.a className="w-12 h-12 flex justify-center items-center border border-solid border-black/[.08] dark:border-white/[.145] z-10 font-extrabold text-3xl"
-            title="Contact"
-            variants={item}>
-            C
-          </motion.a> */}
+
         </motion.div>
         }    
       </AnimatePresence>

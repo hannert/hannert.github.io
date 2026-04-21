@@ -11,6 +11,8 @@ import ProjectContainer from "./components/project-container";
 import Github from "./components/svgs/github";
 import LinkedIn from "./components/svgs/linkedin";
 import Mail from "./components/svgs/mail";
+import TitleCard from "./components/title-card";
+import Hobbies from "./components/hobbies";
 
 export default function Home() {
   return (
@@ -44,11 +46,32 @@ export default function Home() {
             </p>
           </motion.div>
         </div>
+        <TitleCard
+          frontText="H"
+          firstColor="text-yellow-500"
+          bodyText={"omeLab"}
+        />
         <a id="HomeLab" />
         <HomeLab />
-        <Divider />
+        <div className="w-full">
+          <Divider />
+        </div>
         <a id="Projects" />
-        <ProjectContainer title={"Projects"}></ProjectContainer>
+        <ProjectContainer
+          title={"Projects"}
+          color={"text-green-500"}
+        ></ProjectContainer>
+        <div className="w-full">
+          <Divider />
+        </div>
+
+        <a id="Hobbies" />
+        <TitleCard
+          frontText="H"
+          firstColor="text-blue-500"
+          bodyText={"obbies 🦐"}
+        />
+        <Hobbies />
         <Cube></Cube>
 
         <motion.div style={{}}></motion.div>
